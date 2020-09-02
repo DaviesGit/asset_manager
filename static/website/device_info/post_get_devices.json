@@ -1,0 +1,54 @@
+{
+    "command": "get_devices",
+    "data": {
+        "page": 1,
+        "devices_per_page": 10
+    }
+}
+
+{
+    "status": 0,
+    "data": [
+        {
+            "device_id": "3452354",
+            "device_name": "矢量分析仪",
+            "device_type": "分析仪",
+            "specifications": "10MHz-26.5GHz",
+            "device_model": "8510SX",
+            "location": "一号科研办公楼C-306",
+            "status": "在库",
+            "device_pic": "http://dygkpt.uestc.edu.cn/order-portlet/images/14010060.jpg",
+            "warranty_date": "2022年11月21日",
+            "purchase_date": "2018年11月21日",
+            "registry_date": "2018年11月22日",
+            "supplier": "德国SPECS",
+            "comment": "此设备由王经理购买于德国",
+            "belong": "成都**科技有限公司",
+            "user_id": "201634523",
+            "user_name": "王国强",
+            "user_tel": "15187989769",
+            "user_email": "wangguoqaing@foxmail.com"
+        },
+        {
+            "device_id": "3452354",
+            "device_name": "矢量分析仪",
+            "device_type": "分析仪",
+            "specifications": "10MHz-26.5GHz",
+            "device_model": "8510SX",
+            "location": "一号科研办公楼C-306",
+            "status": "在库",
+            "device_pic": "http://dygkpt.uestc.edu.cn/order-portlet/images/14010060.jpg",
+            "warranty_date": "2022年11月21日",
+            "purchase_date": "2018年11月21日",
+            "registry_date": "2018年11月22日",
+            "supplier": "德国SPECS",
+            "comment": "此设备由王经理购买于德国",
+            "belong": "成都**科技有限公司",
+            "user_id": "201634523",
+            "user_name": "王国强",
+            "user_tel": "15187989769",
+            "user_email": "wangguoqaing@foxmail.com"
+        }
+    ],
+    "error": "device not found!"
+}

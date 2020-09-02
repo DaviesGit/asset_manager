@@ -1,0 +1,163 @@
+﻿/*base*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td{margin: 0;padding: 0;}
+fieldset,img {border: 0;}
+:focus {outline: 0;}
+address,caption,cite,code,dfn,em,th,var,optgroup {font-style: normal;font-weight: normal;}
+h1,h2,h3,h4,h5,h6{font-size: 100%;font-weight: normal;}
+abbr,acronym{border: 0;font-variant: normal;}
+input,button,textarea,select,optgroup,option{font-family: inherit;font-size: inherit;	font-style: inherit;font-weight: inherit;}
+code,kbd,samp,tt{font-size: 100%;}
+input,button,textarea,select{*font-size: 100%;}
+body{font:12px/1.5 "微软雅黑",Tahoma, Arial; color: #747b81; background:#f3f3f3; }
+html,body{height: 100%;width: 100%;position: relative;}
+*{
+box-sizing: border-box; /*it gives error:Validation (CSS 2.1): 'box-sizing' is not a known CSS property name. */
+-ms-box-sizing: border-box; 
+-moz-box-sizing: border-box; 
+-webkit-box-sizing: border-box; 
+}
+ol,ul{list-style: none;}
+a,a:visited{text-decoration: none; color: #444;}
+a:hover{ text-decoration: none; color: #e08f30;}
+img{display: inline-block; border: 0px;}
+.clear{clear:both;}
+.w1280{width:1280px; margin:0 auto;}
+.fl{float:left;}
+.fr{float:right;}
+.f-g{color:#63a140;}
+.f14{font-size:14px;}
+.input{vertical-align:middle;}
+
+/*home*/
+.wallpaper{
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-top:-340px;
+	margin-left:-640px;
+	width:1280px;
+	height:680px;
+	background:#fff;
+	/*background:url(images/main-bg.png) repeat left top;*/
+	padding-top:15px;
+}
+@media screen and (max-height: 680px) {
+.wallpaper{
+	position:absolute;
+	top:0%;
+	left:50%;
+	margin-top:0;
+	margin-left:-640px;
+	width:1280px;
+	height:680px;
+	background:#fff;
+	/*background:url(images/main-bg.png) repeat left top;*/
+	padding-top:15px;
+}
+}
+#Change {
+	width:1246px;
+	height:650px;
+	margin:0 auto;
+}
+.mainarea{
+	width:1246px;
+	height:650px;
+	  position: relative;
+}
+.logo{
+	margin:0;
+	padding:0;
+}
+
+.log-area{
+	width:360px;
+	height:240px;
+	margin-left:760px;
+	box-sizing:border-box;
+}
+.logo-ico{
+	width:494px;
+	text-align:center;
+	margin-bottom:25px;
+}
+.btn-dl{
+	float:right;
+	width:126px;
+	text-align:center;
+	margin-top:5px;
+}
+.form-area{
+	width:360px;
+	margin:0 auto;
+}
+.form-area span{
+	display:inline-block;
+	height:28px;
+	margin-bottom:10px;	
+}
+.form-area p{
+	height:46px;
+	margin-bottom:15px;	
+}
+.form-area p img{
+	vertical-align:middle;
+}
+.form-area .ipt{
+	vertical-align:middle;
+	border:0;
+	background:none;
+	height:46px;
+	line-height:46px;
+	width:250px;
+}
+.ipt-bg1{
+	background:url(../images/ipt-user.png) no-repeat left center;
+	width:362px;
+	height:46px;
+	line-height:46px;
+	font-size:14px;
+	color:#aaa;
+	padding-left:100px;
+}
+.ipt-bg2{
+	background:url(../images/ipt-pwd.png) no-repeat left center;
+	width:362px;
+	height:46px;
+	line-height:46px;
+	font-size:14px;
+	color:#aaa;
+	padding-left:100px;
+}
+.session-area{
+	float:left;
+	width:150px;
+	height:36px;
+	line-height:36px;
+}
+.chkbox{
+	vertical-align:middle;
+	width:20px;
+	height:20px;
+	margin-right:5px;	
+}
+
+
+/*footer
+.footer{	
+	position:absolute;
+	bottom:0;
+	width:100%;
+	margin:0 auto;
+	height:48px;
+	line-height:48px;
+	text-align:center;
+	color:#555;
+	font-size:12px;
+}*/
+.footer p{	
+	line-height:50px;
+}
+.copytext{
+	font-family:Arial, Helvetica, sans-serif;
+}

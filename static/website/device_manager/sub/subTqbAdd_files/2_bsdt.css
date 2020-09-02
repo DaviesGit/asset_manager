@@ -1,0 +1,72 @@
+#headerMini{
+    position: fixed;
+    background-color: #3E50B4;
+    height: 48px;
+    color: #333333;
+    width: 100%;
+    z-index: 13;
+    min-width: 1152px;
+}
+
+#headTab{
+	float: left;
+}
+
+.head-tab-block{
+	overflow: hidden;
+	position: relative;
+}
+
+.head-tab{
+	overflow: hidden;
+	color: #fff;
+	margin-top: 8px;
+	font-size: 0;
+	position: relative;
+	height: 40px;
+}
+
+.tab-more .head-tab .head-tab-item{
+    padding: 10px 4px;
+}
+
+.head-tab-item{
+	display: inline-block;
+    padding: 10px 16px;
+    cursor: pointer;
+    background-color: #5061BB;
+    margin-right: 1px;
+    height: 40px;
+    text-align: center;
+    font-size: 14px;
+    position: relative;
+}
+.head-tab-item:hover,
+.head-tab-item.active{
+	background-color: #2196F3;
+}
+.head-tab-item.active .icon-head-tab-close{
+	display: block;
+}
+.head-tab-item .icon-head-tab-close{
+	position: absolute;
+	right: 4px;
+	top: 0;
+	display: none;
+}
+#appTabPagination{
+    visibility: hidden;
+	float: right;
+    margin-top: 24px;
+}
+.icon-app-tab-page-left{
+	margin-left: 4px;
+	margin-right: 1px;
+	 -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.icon-app-tab-page-right{
+	margin-right: 8px;
+}

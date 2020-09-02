@@ -1,0 +1,52 @@
+/* Custom page header */
+.header {
+  padding-bottom: 1rem;
+  border-bottom: .05rem solid #e5e5e5;
+  margin-bottom: 2rem;
+}
+
+.clearfix::after {
+    display: block;
+    content: "";
+    clear: both;
+}
+
+body {
+    padding-bottom: 1.5rem;
+}
+
+.container{
+    max-width: 960px;
+}
+
+
+.loading::before{
+    background-image: url("./asset/loading2.gif");
+    background-size: 1rem 1rem;
+    display: inline-block;
+    height:1rem;
+    width:1rem;
+    content:"";
+
+}
+
+#borrow_confirm *{
+    font-size:1rem;
+}
+#borrow_confirm{
+    padding:3rem 3rem 0rem 3rem;
+}
+
+
+.ui-dialog-titlebar.ui-widget-header{
+    background: #b0e1fe;
+}
+
+.ui-dialog-title{
+    color:white;
+}
+
+#img_qrcode{
+    width: 100% !important;
+    height: auto !important;
+}

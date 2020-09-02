@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>add_devices</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <script src="../library/jquery-3.2.1.js"></script>
+    <script src="./main.js"></script>
+</head>
+
+<body style="background-color:rgb(237,251,255);">
+    <nav class="navbar navbar-light navbar-expand-md">
+        <div class="container-fluid"><a class="navbar-brand" href="../main_page/main_page.html"><img style="" src="../asset/logo.png"></a>
+            <button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="nav navbar-nav">
+                    <li class="nav-item" role="presentation"><a class="btn" href="../main_page/main_page.html"><strong>首页</strong></a></li>
+                    <li class="nav-item" role="presentation"><a class="btn" href="../all_devices/all_devices.html"><strong>所有设备</strong></a></li>
+                    <li class="nav-item" role="presentation"><a class="btn" href="../device_manager/device_manager.html"><strong>后台管理</strong></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div><img style="width:100%; padding-bottom:2rem;" src="../asset/banner.png"></div>
+    <div>
+        <div class="alert alert-primary w-100" role="alert">
+            <h3 class="pl-5"><strong>添加设备</strong></h3>
+        </div>
+    </div>
+    <div class="container w-75">
+        <form>
+            <div class="form-row">
+                <div class="col p-0">
+                    <div class="alert alert-primary m-0" role="alert"><span>设备 <strong>基本信息</strong><br></span></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-12"><label>设备编号：</label><input id="device_id" name="device_id" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>设备名称：</label><input id="device_name" name="device_name" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>设备类型：<br></label><input id="device_type" name="device_type" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>规格：<br></label><input id="specifications" name="specifications" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>设备型号：<br></label><input id="device_model" name="device_model" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>存放位置：<br></label><input id="location" name="location" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>设备状态：<br></label><input id="status" name="status" class="form-control" type="text"></div>
+            </div>
+            <div class="form-row pt-3">
+                <div class="col p-0">
+                    <div class="alert alert-primary m-0" role="alert"><span><strong>归属科室</strong>&nbsp;与&nbsp;<strong>联系人</strong><br></span></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-12"><label>归属科室：<br></label><input id="belong" name="belong" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>联系人编号：<br></label><input id="user_id" name="user_id" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>联系人名称：<br></label><input id="user_name" name="user_name" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>联系人电话：<br></label><input id="user_tel" name="user_tel" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>联系人邮箱：<br></label><input id="user_email" name="user_email" class="form-control" type="text"></div>
+            </div>
+            <div class="form-row pt-3">
+                <div class="col p-0">
+                    <div class="alert alert-primary m-0" role="alert"><span><strong>保修&nbsp;</strong>及&nbsp;<strong>其它信息</strong><br></span></div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-lg-6"><label>保修日期：<br></label><input id="warranty_date" name="warranty_date" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>采购日期：<br></label><input id="purchase_date" name="purchase_date" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>登记日期：<br></label><input id="registry_date" name="registry_date" class="form-control" type="text"></div>
+                <div class="col-lg-6"><label>供应商：<br></label><input id="supplier" name="supplier" class="form-control" type="text"></div>
+                <div class="col-lg-12"><label><strong>备注：</strong><br></label><textarea id="comment" name="comment" class="form-control"></textarea></div>
+            </div>
+            <div class="form-row pt-3">
+                <div class="col p-0">
+                    <div class="alert alert-primary m-0" role="alert"><span><strong>设备&nbsp;图片：</strong><br></span></div>
+                </div>
+            </div>
+            <div class="form-row pt-3">
+                <div class="col-lg-6">
+                    <div class="media">
+                        <img id="img_preview" style="max-height:200px;" class="mr-3">
+                    </div>
+                </div>
+                <div class="col">
+                    <input id="device_pic" name="device_pic" class="pl-5 btn btn-success" type="file" id="device_pic" name="device_pic" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <hr>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col">
+                    <div class="btn-group float-right" role="group">
+                        <button id="button_cancel" class="btn btn-danger ml-3 mr-3" type="button">返回</button>
+                        <button id="button_empty" class="btn btn-primary ml-3 mr-3" type="button">清空</button>
+                        <button id="button_submit" class="btn btn-success ml-3 mr-3" type="button">确定</button></div>
+                </div>
+            </div>
+        </form>
+        <footer class="pt-5"></footer>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+
+</html>

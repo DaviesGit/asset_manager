@@ -1,0 +1,396 @@
+
+/* -----------------------------------------
+   Header styles
+----------------------------------------- */
+#header {
+  height: 50px;
+  background: #75b9e6;
+  z-index: 999;
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+#header .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+#header.header-fixed {
+  position: fixed;
+}
+#header .navbar {
+  height: 50px;
+  margin-bottom: 0;
+  padding-right: 20px;
+  background: #3E50B4;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+#header .navbar .navbar-toggle {
+  margin-right: 20px;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  position: absolute;
+  right: 0;
+}
+#header .navbar .navbar-toggle .icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  border-radius: 1px;
+  background: #ffffff;
+}
+#header .navbar .navbar-collapse {
+  max-height: 340px;
+  overflow-x: visible;
+  padding-right: 15px;
+  padding-left: 15px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  background-color: #75b9e6;
+}
+#header .navbar .navbar-brand {
+  padding: 0;
+  width: 210px;
+  margin-right: 0;
+}
+#header .navbar .navbar-brand .text-logo-element {
+  font-size: 32px;
+  color: #1a608f;
+  margin-left: 34px;
+  margin-right: 10px;
+  margin-top: -8px;
+}
+#header .navbar .navbar-brand .text-logo,
+#header .navbar .navbar-brand .text-slogan {
+  font-weight: bold;
+  font-family: 'Droid Sans';
+  font-size: 24px;
+  text-transform: uppercase;
+  margin-top: 15px;
+  display: inline-block;
+}
+#header .navbar .navbar-brand .text-logo {
+  color: #124363;
+}
+#header .navbar .navbar-brand .text-slogan {
+  color: #ffffff;
+}
+#header .navbar .nav li a {
+  line-height: 50px;
+  padding-top: 0;
+  padding-bottom: 0;
+  color: #ffffff;
+  width: auto;
+  position: relative;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  overflow-x: hidden;
+  font-size: 13px;
+  min-width: 50px;
+  text-align: center;
+  outline: none;
+}
+#header .navbar .nav li a:hover,
+#header .navbar .nav li a:focus {
+  background: #3498da;
+}
+#header .navbar .nav li a i {
+  font-size: 24px;
+  /*text-shadow: 1px 1px 1px rgba(0,0,0, 0.5);*/
+}
+#header .navbar .nav li a .user-avatar {
+  float: left;
+  margin: 8px 0px 5px 0;
+  border-radius: 4px;
+  width: 40px;
+  height: 35px;
+}
+#header .navbar .nav li.dropdown .dropdown-menu {
+  min-width: 200px;
+}
+#header .navbar .nav li.active a {
+  background: #b6daf2;
+}
+#header .navbar .nav li.dropdown.open .dropdown-menu li a {
+  color: #768399;
+  text-align: left;
+  padding-left: 15px;
+  /*&:hover {
+						color: @white;
+						background: @headerBackground;
+					}*/
+}
+#header .navbar .nav li.dropdown.open .dropdown-menu li a:hover {
+  background: #f3f5f6;
+  color: #535e6f;
+}
+#header .navbar .nav li.dropdown.open .dropdown-menu li a:hover i {
+  color: #75b9e6;
+}
+#header .navbar .nav li.dropdown.open .dropdown-menu li a i {
+  margin-right: 10px;
+}
+#header .navbar .nav li.dropdown.open .dropdown-menu li a .notification {
+  top: 15px;
+  right: 10px;
+}
+#header .navbar .nav li.dropdown.open .email {
+  min-width: 300px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-head {
+  margin-top: 5px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-head div.clearfix a {
+  padding-left: 13px;
+  display: inline-block;
+  border-radius: 4px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-head div.clearfix a i {
+  margin-right: 0;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-head div.clearfix div.pull-left,
+#header .navbar .nav li.dropdown.open .email li.mail-head div.clearfix div.pull-right {
+  width: 25%;
+  padding: 0;
+  text-align: center;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-head span {
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  line-height: 48px;
+  width: 45%;
+  display: inline-block;
+  font-size: 16px;
+}
+#header .navbar .nav li.dropdown.open .email li.search-email form {
+  padding: 0 10px 5px;
+  position: relative;
+}
+#header .navbar .nav li.dropdown.open .email li.search-email form input {
+  height: 40px;
+  padding-left: 35px;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #e7e7e2;
+}
+#header .navbar .nav li.dropdown.open .email li.search-email form button {
+  position: absolute;
+  left: 15px;
+  top: 10px;
+  border: none;
+  background: none;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list {
+  position: relative;
+  padding: 0;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list a {
+  padding: 0;
+  overflow: inherit;
+  line-height: inherit;
+  white-space: inherit;
+  float: left;
+  padding: 0 10px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list a:hover {
+  background: #f3f5f6;
+  color: #768399;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list a:hover .status i {
+  color: inherit;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list .mail-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 4px;
+  float: left;
+  position: absolute;
+  top: 10px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.name {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 0;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.name .status {
+  color: #71d398;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.name .status i {
+  font-size: 30px;
+  width: 20px;
+  margin-right: 5px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.name .status.off {
+  color: #f68484;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.name .notification {
+  position: relative;
+  display: inline-block;
+  top: auto;
+  right: auto;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.name .time {
+  float: right;
+  margin-top: 3px;
+  margin-right: 5px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-list p.msg {
+  float: left;
+  padding-left: 60px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-more a {
+  margin: 10px;
+  text-align: center;
+  background: #f3f5f6;
+  border-radius: 4px;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-more a:hover {
+  background: #75b9e6;
+  color: #ffffff;
+}
+#header .navbar .nav li.dropdown.open .email li.mail-more a:hover i {
+  color: #ffffff;
+}
+#header .navbar .nav li.dropdown.open .notification-menu {
+  min-width: 300px;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li {
+  padding: 0 10px;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li i {
+  font-size: 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-user,
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-link {
+  padding: 0;
+  overflow: inherit;
+  display: inline-block;
+  font-size: 14px;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-user:hover,
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-link:hover {
+  background: none;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-user {
+  margin-right: 5px;
+  color: #f68484;
+  font-weight: bold;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-user:hover {
+  color: #f35454;
+  text-decoration: underline;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-action {
+  color: #bfc5cf;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-link {
+  font-weight: bold;
+  color: #71d398;
+  text-decoration: underline;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li .notification-link:hover {
+  color: #4ac77c;
+}
+#header .navbar .nav li.dropdown.open .notification-menu li:hover {
+  background: #f3f5f6;
+}
+#header .navbar .nav.navbar-nav > .open > a,
+#header .navbar .nav.navbar-nav > .open > a:focus {
+  background: #3498da;
+}
+#header #header-area {
+  width: 100%;
+  padding: 15px;
+  background: #ffffff;
+  border-bottom: 2px solid #4aa3de;
+  border-top: 2px solid #4aa3de;
+  display: none;
+  float: left;
+  height: auto;
+}
+#header #header-area ul {
+  margin-bottom: 0;
+}
+#header #header-area .header-area-inner {
+  text-align: center;
+  height: 100px;
+}
+#header #header-area .shortcut-button {
+  margin-bottom: 0;
+  height: auto;
+}
+#header #header-area.show-header-area {
+  display: block;
+}
+/* -----------------------------------------
+   Sidebar styles
+----------------------------------------- */
+/* ------------------ Notifications --------------------*/
+.notification {
+  background-color: #f68484;
+  border-radius: 7px;
+  font: bold 11px Arial;
+  color: #ffffff;
+  line-height: 20px;
+  min-width: 20px;
+  position: absolute; 
+  top: 6px;
+  right: 12px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  padding-left: 4px;
+  padding-right: 4px;
+}
+.notification.green {
+  background-color: #71d398;
+}
+.notification.blue {
+  background-color: #75b9e6;
+}
+.notification.teal {
+  background-color: #97d3c5;
+}
+.notification.white {
+  background-color: #ffffff;
+  color: #79859b;
+}
+.notification.dark {
+  background-color: #79859b;
+}
+.notification.yellow {
+  background-color: #ffcc66;
+  color: #ffffff;
+}
+.notification.orange {
+  background-color: #f4b162;
+}
+.notification.purple {
+  background-color: #af91e1;
+}
+.notification.pink {
+  background-color: #f78db8;
+}
+.notification.lime {
+  background-color: #a8db43;
+}
+.notification.magenta {
+  background-color: #e65097;
+}
+.notification.brown {
+  background-color: #d1b993;
+}
+.notification.onhover {
+  opacity: 0;
+}
+

@@ -1,0 +1,312 @@
+// JavaScript Document
+(function($) {    
+	$.fn.hasScrollBar = function() {        
+		return this.get(0).scrollHeight > this.height();    
+}})(jQuery);
+
+var _commonUI={
+
+	isEmai : function (str) {
+		var reg = /^([a-zA-Z0-9_-])+@([a-zA-Z0-9_-])+((\.[a-zA-Z0-9_-]{2,3}){1,2})$/;
+		return reg.test(str);
+	},
+	isPositiveInt : function (str) {
+		var patt=new RegExp(/[^0-9]/gi);
+        return patt.test(str)||str=="";
+	},
+		
+//获取单个模块
+	loadHtml : function (id, url, fn) {
+		if(id=='') id= _RESULT;
+		/*if(!_CommonUI.hasObject(fn)){
+			fn=function (s,status) {
+					$("#"+id).html(s);
+			}
+		}*/
+		//session has been expired 
+		$menuObject = $("#" + id);
+		//$menuObject.html(g_loading_pic).load(url, fn);
+		$menuObject.html(g_loading_pic);
+		//new Date().getTime()
+		url = _commonUI.appendUrl(url,"version",new Date().getTime());
+		$.get(url,function(result){
+			if(typeof(result)=="string"){
+				if(result.indexOf("session has been expired")>-1){
+					window.location.href = base+"/expired.action";
+					return false;
+				}else{
+					if(result.indexOf("loginForm")>-1){
+						window.location.href = base+"/login.jsp";
+						return false;
+					}
+					$menuObject.html(result);
+					if(_commonUI.hasObject(fn)){
+						fn();
+					}
+				}
+			}else{
+				$menuObject.html("");
+			}
+		});
+	},
+	loadMyPage : function (id, url, fn) {
+		var $page = $("#" + id);
+		if($page.length>1){
+			$page = $page.last();
+		}
+		if(id=='') id= _RESULT;
+		$("#" + id).html(g_loading_pic).load(url, fn);
+	},
+
+		
+	loadHtml2 : function (id, url, fn) {
+		$("#" + id).html(url);
+	},
+	getInputFileName : function(o){
+		//var suffix = $(o).val().match(/^(.*)(\.)(.{1,8})$/)[3].toLowerCase();
+		var fileName =  $(o).val().substring($(o).val().lastIndexOf("\\")+1);
+		return  fileName;
+	},
+	resetFileInput :function(file){   
+	    file.after(file.clone().val(""));   
+	    file.remove();   
+	}, 
+
+		
+// 在GBK编码里，除了ASCII字符，其它都占两个字符宽
+	getBytesLength : function (str) {
+		return str.replace(/[^\x00-\xff]/g, "xx").length;
+	},
+	
+	hasObject : function(o){
+		return typeof(o)!="undefined"
+	},
+	isArray : function(v){
+	    return Object.prototype.toString.apply(v) === '[object Array]';
+	  },
+	isJquery : function($j){
+		return $j instanceof jQuery;
+	},
+	isEmpty : function(o){
+		return typeof(o)!="undefined"&&$.trim(o)=="";
+	},
+	onHighlight : function(expression){
+		$(expression).bind("click",function(){
+			$(expression).removeClass("highlight");
+			$(this).addClass("highlight");
+		});
+	},
+	mouseOver : function(expression){
+		$(expression).bind("mouseover",function(){
+			$(this).addClass("mouseOver");
+		}).bind("mouseout",function(){
+				$(this).removeClass("mouseOver");
+		  });
+	},
+	
+//图片按比例缩放
+	DrawImage : function (ImgD, iwidth, iheight) {
+    //参数(图片,允许的宽度,允许的高度)
+		var image = new Image();
+		image.src = ImgD.src;
+		if (image.width > 0 && image.height > 0) {
+			if (image.width / image.height >= iwidth / iheight) {
+				if (image.width > iwidth) {
+					ImgD.width = iwidth;
+					ImgD.height = (image.height * iwidth) / image.width;
+				} else {
+					ImgD.width = image.width;
+					ImgD.height = image.height;
+				}
+				ImgD.alt = image.width + "\xd7" + image.height;
+			} else {
+				if (image.height > iheight) {
+					ImgD.height = iheight;
+					ImgD.width = (image.width * iheight) / image.height;
+				} else {
+					ImgD.width = image.width;
+					ImgD.height = image.height;
+				}
+				ImgD.alt = image.width + "\xd7" + image.height;
+			}
+		}
+		$(ImgD).css("display", "");
+	},
+	
+	//清除file文件框内容
+	clearFileInput : function(id){
+		file = $("#"+id);
+		file.after(file.clone().val(""));  
+	    file.remove();
+	},
+	getForm : function(form){
+		if(!(form instanceof jQuery)){
+			if(typeof(form)=="object"){
+				if(form.tagName=="FORM")
+					var form=$(form);
+				else
+					var form=$(form).parents('form');
+			}else{
+				var form=$('#'+form);
+			}
+		}
+		return form;
+	},
+	isEnterKey : function (event){
+		return (event.keyCode==13);
+		//evt = (evt) ? evt : ((window.event) ? window.event : "") //兼容IE和Firefox获得keyBoardEvent对象
+		//var key = evt.keyCode?evt.keyCode:evt.which; //兼容IE和Firefox获得keyBoardEvent对象的键值
+		//alert(key);
+		//if(key == 13){ //判断是否是回车事件。
+		//	return true;   
+		//}else{
+		//	return false;
+		//}
+
+	},
+	appendUrl : function (url,key,value){
+		if(url.indexOf("?")==-1)
+			url=url+"?"+key+"="+value;
+		else
+			url=url+"&"+key+"="+value;
+		
+		return url;
+	},
+	isJson : function (obj){
+		var isjson = typeof(obj) == "object" && Object.prototype.toString.call(obj).toLowerCase() == "[object object]" && !obj.length;    
+		return isjson;
+	},
+	isScrollX : function(o){
+		if(typeof(o)=="object"){
+			o=$(o);
+		}else{
+			o=$('#'+o);
+		}
+		if(!o instanceof jQuery){
+		  alert("不能得到一个jQuery对象！");
+		  return false;
+		}
+		return o.width()*1<o.attr('scrollWidth');
+	},
+	isScrollY : function(o){
+		if(typeof(o)=="object"){
+			o=$(o);
+		}else{
+			o=$('#'+o);
+		}
+		if(!o instanceof jQuery){
+		  alert("不能得到一个jQuery对象！");
+		  return false;
+		}
+		return o.height()*1<o.attr('scrollHeight');
+	},
+	
+	//处理键盘事件 禁止后退键（Backspace）密码或单行、多行文本框除外
+	enabledBankspaceToBackPage : function(){
+			var doKey=function(e){
+				var ev = e || window.event;//获取event对象   
+	            var obj = ev.target || ev.srcElement;//获取事件源   
+	            
+	            var t = obj.type || obj.getAttribute('type');//获取事件源类型  
+	            
+	            //获取作为判断条件的事件类型
+	            var vReadOnly = obj.getAttribute('readonly');
+	            var vEnabled = obj.getAttribute('enabled');
+	            //处理null值情况
+	            vReadOnly = (vReadOnly == null) ? false : vReadOnly;
+	            vEnabled = (vEnabled == null) ? true : vEnabled;
+	            vReadOnly = (vReadOnly == 'readonly') ? true : vReadOnly;
+	            //当敲Backspace键时，事件源类型为密码或单行、多行文本的，并且readonly属性为true或enabled属性为false的，则退格键失效
+	            var flag1=(ev.keyCode == 8 && (t=="password" || t=="text" || t=="textarea") && (vReadOnly==true || vEnabled!=true))?true:false;
+	           
+	            //当敲Backspace键时，事件源类型非密码或单行、多行文本的，则退格键失效
+	            var flag2=(ev.keyCode == 8 && t != "password" && t != "text" && t != "textarea")?true:false;        
+	            
+	            //判断
+	            if(flag2){
+	                return false;
+	            }
+	            if(flag1){   
+	                return false;   
+	            }
+            }   
+             //禁止后退键 作用于Firefox、Opera
+       		 document.onkeypress=doKey;
+	        //禁止后退键  作用于IE、Chrome
+	     	 document.onkeydown=doKey;
+	}
+}
+
+function hideDocumentOut(id,pid,setting,callback){
+	if(typeof(setting)=="function"){
+		callback = setting; 
+		setting = {};
+	}
+	if(!setting) setting ={};
+	
+	var fn = function(event){  
+		
+		var flag = false;
+		
+		if($("#"+pid).length==0){
+			$(document).unbind("mouseup",fn);
+			flag = true;
+		}
+		
+	/*	setTimeout(function(){
+			if($("#"+pid).length>0){
+				alert(id);
+			}
+		},1000);*/
+		if(flag){
+			return false;
+		}
+		
+		var $os;
+		if(setting.isClass){
+			$os = $(event.target).parents("."+id);
+		}else{
+			$os = $(event.target).parents("#"+id);
+		}
+	    if($os.length==0){
+	    	if(callback){
+	    		callback();
+	    	}else{
+	    		$("#"+id).hide();  
+	    	}
+	    }  
+	}
+	
+	$(document).mouseup(fn);
+}
+
+
+//字符串根据正则表达式替换指定字符
+String.prototype.replaceAll = function (s1, s2) {
+	return this.replace(new RegExp(s1, "gm"), s2);
+};
+
+String.prototype.parseDateByJava = function (parse){
+	if(this=='undefined') return "";
+	var date = new Date(new Date().valueOf(this));
+	if(typeof(parse)!='undefined'){
+	
+	}else{
+		var day=date.getDate();
+		day=day<10?"0"+day:day;
+		var month=date.getMonth() + 1;
+		month=month<10?"0"+month:month;
+		var year=date.getFullYear();
+		
+		return year+"-"+month+"-"+day;
+	}
+};
+String.prototype.parseDate = function(split){
+		return new Date(this.replaceAll(split,"/"))	
+	}
+
+function closeLayer(){
+	var index = parent.layer.getFrameIndex(window.name); //先得到当前iframe层的索引
+	parent.layer.close(index);
+}
+	

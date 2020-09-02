@@ -1,0 +1,238 @@
+.eXtremeTable {
+	margin: 0;
+	padding: 0;
+}
+
+.eXtremeTable table{
+	/*background-color: #F4F4F4;*/
+	border: none;
+}
+.eXtremeTable table.eXtremeTable_statusBar{
+	float:left;
+	height:35px;
+}
+
+.eXtremeTable table.eXtremeTable_toolbar{
+	float:right;
+}
+
+.eXtremeTable select {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	border: solid 1px #EEE;
+	width: 75px;
+}
+
+.eXtremeTable .tableRegion {
+	/*border: 1px solid silver;*/
+	/*padding: 2px;*/
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	border-collapse:collapse;
+	/*margin-top: 7px;*/
+}
+
+.eXtremeTable .filter {
+	background-color: #F4F4F4;
+}
+
+.eXtremeTable .filter td {
+	padding: 2px;
+}
+
+.eXtremeTable .title {
+	color: #444444;
+	font-weight: bold;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 15px;
+	vertical-align: middle;
+}
+
+.eXtremeTable .titleRow {
+	background-color: #F4F4F4;
+}
+
+.eXtremeTable .titleRow td {
+	border-bottom: 1px solid #C3C4F3;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.eXtremeTable .titleRow span {
+	color: #444444;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.eXtremeTable .filter input {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	border: solid 1px grey;
+	padding: 1px;
+}
+
+.eXtremeTable .filter select {
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	border: solid 1px #EEE;
+}
+
+.eXtremeTable .tableHeader {
+	
+	background-color: #f1f1f1;
+	background: -webkit-linear-gradient(top, #f1f1f1 0, #f1f1f1 100%);
+	background: -moz-linear-gradient(top, #f1f1f1 0, #f1f1f1 100%);
+	background: -o-linear-gradient(top, #f1f1f1 0, #f1f1f1 100%);
+	background: linear-gradient(to bottom, #f1f1f1 0, #f1f1f1 100%);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#f1f1f1,
+		endColorstr=#f1f1f1, GradientType=0 );
+	font-size: 12px;
+	font-weight: bold;
+	border-width:1px 1px 1px 1px;
+	border-style:solid;
+	border-color:#cacaca;
+	height: 38px;
+	padding-left:4px;
+}
+
+.eXtremeTable .tableHeaderSort {
+	background-color: #f8f8f8;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	text-align: left;
+	padding-right: 4px;
+	padding-left: 4px;
+	border-right-style: solid;
+	border-right-width: 1px;
+	border-color: white;
+}
+
+.eXtremeTable .odd a, .even a {
+	color: Black;
+	font-size: 13px;
+}
+
+.eXtremeTable .odd td, .eXtremeTable .even td {
+	padding-top: 2px;
+	padding-right: 3px;
+	padding-bottom: 2px;
+	padding-left: 3px;
+	vertical-align: middle;
+	font-size: 13px;
+	border: 1px solid #cacaca;
+	height:38px;
+}
+
+.eXtremeTable .odd {
+	background-color: #FFFFFF;
+}
+
+.eXtremeTable .even {
+  	background-color: #f8f8f8;
+}
+
+.eXtremeTable .highlight td {
+	color: black;
+	font-size: 13px;
+	padding-top: 2px;
+	padding-right: 3px;
+	padding-bottom: 2px;
+	padding-left: 3px;
+	vertical-align: middle;
+	background-color: #f1f1f1;
+	border:1px solid #cacaca;
+	height:38px;
+}
+
+.eXtremeTable .highlight a, .highlight a {
+	color: black;
+	font-size: 13px;
+}
+
+.eXtremeTable .compactToolbar {
+	background-color: #F4F4F4;
+}
+
+.eXtremeTable .toolbar {
+	/*background-color: #F4F4F4;*/
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+	margin: 2px;
+	border-right: 1px solid silver;
+	border-left: 1px solid silver;
+	border-top: 1px solid silver;
+	border-bottom: 1px solid silver;
+	border: none;
+}
+
+.eXtremeTable .toolbar a:hover {
+	background-color: transparent;
+}
+
+.eXtremeTable .toolbar td {
+	color: #444444;
+	padding: 0px 3px 0px 3px;
+	text-align:center;
+}
+
+.eXtremeTable .separator {
+	width: 7px;
+}
+
+.eXtremeTable .statusBar {
+	/*background-color: #F4F4F4;*/
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 13px;
+}
+
+.eXtremeTable .filterButtons {
+	background-color: #F4F4F4;
+	text-align: right;
+	display: none;
+}
+
+.eXtremeTable .title span {
+	margin-left: 2px;
+}
+
+.eXtremeTable .formButtons {
+	display: block;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+
+.eXtremeTable .formButton {
+	cursor: pointer;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-size:12px;
+	font-weight: bold;
+	background-color: #C3C4F3;
+	color: white;
+	margin-top: 5px;
+	border: outset 1px #333;
+	vertical-align: middle;
+}
+
+.eXtremeTable .calcRow {
+	background-color: #F4F4F4;
+}
+
+.eXtremeTable .calcTitle {
+	background-color: #F4F4F4;
+	color: black;
+	font-family: verdana, arial, helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.eXtremeTable .calcResult {
+	background-color: #F4F4F4;
+	color: black;
+	font-family: verdana, arial, helvetica, sans-serif;
+}
+
+

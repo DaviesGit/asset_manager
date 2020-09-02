@@ -1,0 +1,355 @@
+/*
+ * jQuery validation.js Plugin v1.0 
+ * Copyright 2011.5.27, table
+ * Company : sungard
+ *
+ */
+jQuery.fn.extend({
+			validation : function(tipFlag) {
+				if(tipFlag){
+					tipFlag=false;
+				}
+				var getParames = function(param){
+					var startIndex=param.indexOf("[");
+					var endIndex=param.indexOf("]",startIndex);
+					var type = "";
+					var message = "";
+					if(startIndex!=-1&&endIndex!=-1){
+						type=param.substr(0,startIndex);
+						message=param.substring(startIndex+1,endIndex);
+					}else{
+						type=param;
+						message="信息有误";
+					}
+					return {type:type,message:message};
+				};
+				var defaultMessage="信息有误";
+				var message=defaultMessage;
+				var value="";
+				this.each(function(i){
+					var o = $(this);
+					if(o.attr("disabled")){
+						return;
+					}
+					var validations=$.trim(o.attr("validation"));
+					var alertName= "信息";
+					var value =$.trim(o.val());
+					var id = $(this).attr("id");
+					var flag = false;
+					var parentSelf=false;
+					if(validations!=""){
+						if((o.is("input")&&(o.attr("type")=="text"||o.attr("type")=="password"||o.attr("type")=="file"))||o.is("textarea")){
+						//if(id!=""){
+								var message = message;
+								$(o.attr("validation").split(",")).each(function(j){
+									var param = getParames(this);
+									var type = param.type;
+									message = param.message;
+									if(type=="name"){
+										alertName= message;
+										return true;
+									}else if(type=="empty"){
+										if(message==defaultMessage){
+											message = alertName + "不能为空！";
+										}
+										if(value=="")
+											flag = true;
+										else
+											flag = false;
+									}else if(type=="maxlength"){
+										if(value.length>message){
+											flag=true;
+											message=alertName+"长度不能超过"+message+"！";
+										}
+									}else if(type=="length"){
+										if(message!=defaultMessage){
+											var indexs = message.split("-");
+											if(indexs.length==1){
+												indexs = message.split("||");
+												if(indexs.length>1){
+													$(indexs).each(function(){
+														if(value.length!=this){
+															flag=true;
+															message=alertName+"长度必须在是"+message.replace(/\|\|/, "或")+"位！";
+															return false
+														}
+													});
+													if(value.length!=indexs[0]||value.length>indexs[1]){
+														
+													}
+												}else{
+	       										    if(value.length<indexs){
+														flag=true;
+														message=alertName+"长度至少为"+indexs+"位数！";
+													}
+												}
+											}else if(indexs.length==2){
+												if(value.length<indexs[0]||value.length>indexs[1]){
+													flag=true;
+													if(indexs[0]==indexs[1]){
+														message=alertName+"长度必须为"+indexs[0]+"位！";
+													}else{
+														message=alertName+"长度必须在"+indexs[0]+"-"+indexs[1]+"之间！";
+													}
+												}
+											}
+										}
+										
+									}else if(type=="number"){
+										if(new RegExp(/[^0-9]/gi).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须是正整数数字！";
+										}
+									}else if(type=="decimal"){
+										if(new RegExp(/[^0-9.]/gi).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须是数字！";
+										}
+									}else if(type=="email"){
+										if(!new RegExp(/^[a-zA-Z0-9_\.\-]+\@([a-zA-Z0-9\-]+\.)+[a-zA-Z0-9]{2,4}$/).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"格式不正确！";
+										}
+									}else if(type=="phone"){// 验证电话号码 
+										if(!new RegExp(/^((\(\d{2,3}\))|(\d{3}\-))?(\(0\d{2,3}\)|0\d{2,3}-)?[1-9]\d{5,7}(\-\d{1,4})?$/i).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"格式不正确！";
+										}
+									}else if(type=="mobile"){// 验证手机号码 
+										if(!new RegExp(/^(13|15|18)\d{9}$/i).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"格式不正确！";
+										}
+									}else if(type=="idcard"){
+										if(!new RegExp(/^\d{15}(\d{2}[A-Za-z0-9])?$/i).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须是有效身份证！";
+										}
+									}else if(type=="english"){
+										if(!new RegExp(/^[A-Za-z]+$/i).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须为英文！";
+										}
+									}else if(type=="chinese"){
+										if(!new RegExp(/[\u4E00-\u9FA5\uF900-\uFA2D]/).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须为中文！";
+										}
+									}else if(type=="zip"){
+										if(!new RegExp(/^[1-9]\d{5}$/i).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须为邮政编码格式！";
+										}
+									}else if(type=="ip"){
+										if(!new RegExp(/^(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])(\.(\d{1,2}|1\d\d|2[0-4]\d|25[0-5])){3}$/).test(value)){
+											flag=true;
+											if(message==defaultMessage)
+												message=alertName+"必须为IP地址格式！";
+										}
+									}
+									return jQuery.addError(flag,o,message);
+									/*if(flag){
+										var offset = o.offset();
+										var top = -25;
+										var left = 0;
+										if(!$.isEmptyObject(o.attr('validation_top')))
+											top=o.attr('validation_top')*1;
+										if(!$.isEmptyObject(o.attr('validation_left')))
+											left=o.attr('validation_left')*1;
+											jQuery.addError(flag,o,message);
+											
+										return false;
+									}else{
+										o.removeClass("validation_error");
+										if(o.next().find(".formErrorContent").length==1){
+											//alert($("<div></div>").append(o.next()).html());
+											o.next().remove();
+										} 
+										//$("#formError_"+id).remove();
+										//o.removeClass("validation_error");//.next().first().remove();
+									}
+									*/
+								});
+						
+					}else if(o.is("input")&&(o.attr("type")=="radio"||o.attr("type")=="checkbox")){
+						var message = message;
+						var isChecked = false;
+						if(o.attr("vname")){
+							isChecked = o.parents('form').find("input[vname="+o.attr("vname")+"]:checked").length==0;
+						}else{
+							isChecked = o.parents('form').find("input[name="+o.attr("name")+"]:checked").length==0;
+						}
+						if(isChecked){
+							$(o.attr("validation").split(",")).each(function(j){
+								var param = getParames(this);
+								var type = param.type;
+								message = param.message;
+								if(type=="name"){
+									alertName= message;
+									return true;
+								}else if(type=="empty"){
+									if(message==defaultMessage){
+										message = "请选择一个" + alertName;
+										parentSelf = true
+									}
+									flag = true;
+								}
+							});
+						}		
+						o=o.parent();
+						if(tipFlag){
+							 return jQuery.addError(flag,o,message,parentSelf); 
+						}else{
+							jQuery.addError(flag,o,message,parentSelf);
+						}
+						//return jQuery.addError(flag,o,message); //打开每次只报一次错误
+						
+					}else if(o.is("select")){
+						var $options = o.find("option");
+						var message = message;
+						if($options.length>0){
+							var defaultValue = $.trim($options.first().attr("value"));
+							$(o.attr("validation").split(",")).each(function(j){
+								var param = getParames(this);
+								var type = param.type;
+								message = param.message;
+								if(type=="name"){
+									alertName= message;
+									return true;
+								}else if(type=="empty"&&value==defaultValue){
+									if(message==defaultMessage){
+										message = "请选择一个" + alertName;
+									}
+									flag = true;
+								}
+							});
+						}else{
+							$(o.attr("validation").split(",")).each(function(j){
+								var param = getParames(this);
+								var type = param.type;
+								message = param.message;
+								if(type=="name"){
+									alertName= message;
+									return true;
+								}else if(type=="empty"){
+									if(message==defaultMessage){
+										message = "请选择一个" + alertName;
+									}
+									flag = true;
+								}
+							});
+						}
+						if(tipFlag){
+							return jQuery.addError(flag,o,message,parentSelf);
+						}else{
+							jQuery.addError(flag,o,message,parentSelf);
+						}
+					}
+				}
+					if(tipFlag){
+						return !flag;
+					}
+					//return !flag;   //打开每次只报一次错误
+				});
+			},
+			initForm : function(){
+				this.find("[validation]").bind('blur',function(){
+					$(this).validation();
+				});
+		     
+		     },
+		      checkForm : function(){
+		    	this.find("[validation]").validation();
+				return this.find(".validation_error").length==0
+		      }
+		});
+
+jQuery.extend({
+  addError: function(flag,o,message,parentSelf) {
+  		if(flag){
+  			o.addClass("validation_error");//.focus();
+  			//alert(message);
+  			var offset = o.offset();
+  			//解决select必填信息位置显示bug
+  			if (o.is("select")) {
+  				o = o.prev("div");
+  				offset = o.offset();
+  			}
+  			var box=o;
+  			var version = new Date().getTime();
+  			if(!o.attr("errorVersion")){
+  				o.attr("errorVersion",version);
+  			}
+  			if($("#formError_"+o.attr("errorVersion")).length==0){
+  				
+  				tip=$("<div class=\"validation-tip\">"+"<span class=\"validation-tip-content\">"+"</span>"+"<span class=\"validation-tip-pointer\">"+"</span>"+"</div>").appendTo("body");
+  				tip.attr("id","formError_"+o.attr("errorVersion")).find(".validation-tip-content").html(message);
+  				tip.css({display:"block",left:offset.left+box.outerWidth(),top:offset.top}).bind("click",function(){
+  					$(this).remove();
+  				});
+  				if(parentSelf){
+  					o.find("input[validation]").unbind('blur').bind('blur',function(){
+  						$(this).validation(true);
+  					})
+  				}else{
+  					o.unbind('blur').bind('blur',function(){
+  						$(this).validation(true);
+  					});
+  				}
+  			}
+  			//o.after($("<div style='width:130px;height:20;background:red;position:absolute'></div>").css({display:"block",left:o.offset().left+o.outerWidth(),top:o.offset().top}));
+  		}else{
+  			o.removeClass("validation_error");
+  			if(o.attr("errorVersion")){
+  				$("#formError_"+o.attr("errorVersion")).remove();
+  				o.removeAttr("errorVersion");
+  			}
+  			
+  		}
+  		return !flag;
+		/*var formError=$("<div></div>").attr("id","formError_"+o.attr("id")).addClass("formError").addClass("firstnameformError").css("top",top+"px").css("left",left+"px");
+		var formErrorContent=$("<div></div>").addClass("formErrorContent").text(message);
+		var formErrorArrow=$("<div></div>").addClass("formErrorArrow").append('<div class="line10"></div>')
+																		.append('<div class="line9"></div>')
+																		.append('<div class="line8"></div>')
+																		.append('<div class="line7"></div>')
+																		.append('<div class="line6"></div>')
+																		.append('<div class="line5"></div>')
+																		.append('<div class="line4"></div>')
+																		.append('<div class="line3"></div>')
+																		.append('<div class="line2"></div>')
+																		.append('<div class="line1"></div>');
+		formError.append(formErrorContent).append(formErrorArrow).bind('click', function() {
+	 	 $(this).remove();
+		});
+		if(o.next().find(".formErrorContent").length==1){
+			o.next().remove();
+		} 
+			
+		o.after(formError);
+		*/
+	},
+	validation : {
+		init : function(form){
+			if(typeof(form)=='string') form = $("#"+form);
+	     	form.find("input[validation]").bind('blur',function(){
+				$(this).validation(true);
+			});
+	     },
+	    check : function(form){
+	    	if(typeof(form)=='string') form = $("#"+form);
+	    	form.find("input[validation]").validation();
+			return form.find(".validation_error").length==0
+	    }
+	}
+  
+});

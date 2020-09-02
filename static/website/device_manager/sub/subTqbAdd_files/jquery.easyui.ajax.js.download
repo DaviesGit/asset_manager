@@ -1,0 +1,6 @@
+_easyuiAjax = {
+		datebox : function(){//ajax加载时初始化easyui日期控件
+			$('.easyui-datebox:visible').datebox(); 
+			return this;
+		}
+}

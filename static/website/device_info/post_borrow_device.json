@@ -1,0 +1,13 @@
+{
+    "command": "borrow_device",
+    "data": {
+        "borrow_device_id": "3452354",
+        "borrow_user_id": "201634523",
+        "borrow_user_name": "王国强",
+        "borrow_user_tel": "15187989769",
+        "borrow_user_email": "wangguoqaing@foxmail.com",
+        "borrow_lend_time": "2018年11月13日15时41分",
+        "borrow_pre_return": "2018年11月20日15时41分",
+        "borrow_reason": "科学研究"
+    }
+}

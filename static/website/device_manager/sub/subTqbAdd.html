@@ -1,0 +1,4465 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!-- saved from url=(0102)http://zcgl.uestc.edu.cn/private/tqb/manage/integrated/subTqbAdd.action?subTqbType=tqb_gzp&temp=system -->
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title></title>
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<link href="./subTqbAdd_files/default.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/easyui.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/icon.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/extremecomponents.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/jw.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/system.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/jquery.myValidation.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/jquery.datepick.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/animate.min.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/style.min.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/sweetalert(1).css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/layer.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/layui.css">
+	<link rel="stylesheet" type="text/css" href="./subTqbAdd_files/jquery.multiselect.css">
+
+	<!-- <script type="text/javascript">
+		var base = "";
+
+	</script> -->
+	<!-- <script type="text/javascript" src="./subTqbAdd_files/layui.js.download"></script> -->
+	<script type="text/javascript" src="./subTqbAdd_files/jquery-1.8.3.min.js.download"></script>
+	<!-- <script type="text/javascript" src="./subTqbAdd_files/select2.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.form.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery-ui.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.bgiframe.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.easyui.min.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.cookie.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.easyui.ajax.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jqury_myValidatebox.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.myValidation.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.datepick.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/WdatePicker.js.download"></script> -->
+	<link href="./subTqbAdd_files/WdatePicker.css" rel="stylesheet" type="text/css">
+	<!-- <script type="text/javascript" src="./subTqbAdd_files/jquery.datepick-zh-CN.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jw.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/easyui-lang-zh_CN.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/common.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/layer.js.download"></script> -->
+	<link id="layuicss-skinlayercss" rel="stylesheet" href="./subTqbAdd_files/layer(1).css" media="all">
+
+	<!-- <script type="text/javascript" src="./subTqbAdd_files/system.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/mustache.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/mustache.min.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/sweetalert.min.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/ueditor.config.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/ueditor.all.min.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/zh-cn.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.validate.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/jquery.multiselect.js.download"></script> -->
+
+
+	<!-- <script type="text/javascript">
+		$(function () {
+			var message = '';
+			if (message) {
+				layer.alert('');
+			}
+		});
+
+	</script> -->
+	<style type="text/css">
+		input.ok {
+			background: darkgreen;
+			color: white;
+			margin: 5px;
+			border: 1px solid #000;
+			font-size: 13px;
+			width: 100px
+		}
+
+		input.cancel {
+			background: #4E4F52;
+			color: white;
+			margin: 5px;
+			border: 1px solid #000;
+			font-size: 13px;
+			width: 100px
+		}
+
+		input.stop {
+			background: #E20711;
+			color: white;
+			margin: 5px;
+			border: 1px solid #000;
+			font-size: 13px;
+			width: 100px
+		}
+
+		input.return {
+			background: #FC6C03;
+			color: white;
+			margin: 5px;
+			border: 1px solid #000;
+			font-size: 13px;
+			width: 100px
+		}
+	</style>
+	<!-- <script type="text/javascript">
+		$(function () {
+			$(".number").each(function () {
+				var value = $(this).val();
+				$(this).blur(function () {
+
+					var num = $(this).val();
+					if (!isNaN(num)) {
+						var dot = num.indexOf(".");
+						if (dot != -1) {
+							var dotCnt = num.substring(dot + 1, num.length);
+
+							if (dotCnt.length > 2) {
+								$(this).val('');
+								layer.alert("小数位已超过2位！");
+							}
+						}
+						if (num.length > 11) {
+							$(this).val('');
+							layer.alert("数字位数不能超过11位！");
+						}
+					} else {
+						$(this).val('');
+						layer.alert("请输入数字类型！");
+					}
+
+
+				});
+			});
+			// 链接去掉虚框
+			$("button").bind("focus", function () {
+				if (this.blur) { this.blur() };
+			});
+			$("a").bind("focus", function () {
+				if (this.blur) { this.blur() };
+			});
+			//所有下拉框使用select2
+			$("select").select2();
+		});
+		function showmask() {
+			var h = document.body.scrollHeight;
+			$("<div class=\"datagrid-mask\"></div>").css({ display: "block", width: "100%", height: h }).appendTo("body");
+			$("<div class=\"datagrid-mask-msg\"></div>").html("正在处理，请稍候。。。").appendTo("body").css({ display: "block", left: ($(document.body).outerWidth(true) - 190) / 2, top: (h - 45) / 2 });
+		};
+		function removemask() {
+			$('.datagrid-mask-msg').remove();
+			$('.datagrid-mask').remove();
+		};
+
+		function downLoadFile(filePath, realFileName) {
+			window.location.href = "/downLoad.do?filePath=" + filePath + "&realFileName=" + realFileName;
+		}
+
+		function showMessageDialog(url, title, width, height, shadow) {
+			var content = '<iframe name="msgiframe" src="' + url + '" width="100%" height="99%" frameborder="0"></iframe>';
+			var boarddiv = '<div id="msgwindow" title="' + title + '" style="overflow:hidden;"></div>';//style="overflow:hidden;"可以去掉滚动条
+			$(document.body).append(boarddiv);
+			var win = $('#msgwindow').window({
+				content: content,
+				width: width,
+				height: height,
+				top: ($(window).height() - height) * 0.5 + $(document).scrollTop(),
+				left: ($(window).width() - width) * 0.5,
+				minimizable: false,
+				maximizable: false,
+				modal: shadow,
+				title: title
+			});
+			win.window('open');
+		}
+
+		//前往编辑页面
+		function auditEdit(url) {
+			window.location.href = url;
+		}
+
+		/** 解决列表刷新bug（点击复选框） */
+		function addCookie(key1, key2, obj) {
+			var val1 = $.cookie(key1);
+			var val2 = $.cookie(key2);
+			if ($(obj).prop('checked')) {
+				if (val1) {
+					var strCookieValue = val1.substring(0, val1.lastIndexOf('-'));
+					var arrCookieValue = val1.split('-');
+					val1 = val1 + $(obj).val() + '-';
+					val2 = parseInt(val2) + 1;
+					$.cookie(key1, val1, { path: '/' });
+					$.cookie(key2, val2, { path: '/' });
+				} else {
+					$.cookie(key1, $(obj).val() + '-', { path: '/' });
+					$.cookie(key2, 1, { path: '/' });
+				}
+			} else {
+				if (val1) {
+					var newArrCookieValue = '';
+					var strCookieValue = val1.substring(0, val1.lastIndexOf('-'));
+					var arrCookieValue = strCookieValue.split('-');
+					arrCookieValue.splice($.inArray($(obj).val(), arrCookieValue), 1);
+					newArrCookieValue = arrCookieValue.join('-') + '-';
+					if (arrCookieValue != null && arrCookieValue != '') {
+						$.cookie(key1, null, { path: '/' });
+					} else {
+						$.cookie(key1, newArrCookieValue, { path: '/' });
+					}
+				}
+				val2 = parseInt(val2) - 1;
+				$.cookie(key2, val2, { path: '/' });
+			}
+		}
+
+		/** 解决列表刷新bug（批量选中复选框） */
+		function batchAddCookies(key1, key2, obj) {
+			var $checkedBoxes = $('.tableBody tr').find('input[type=checkbox][name=ids]');
+			$checkedBoxes.prop('checked', obj.checked);
+			var val1 = $.cookie(key1);
+			var val2 = $.cookie(key2);
+			var iscf = false;
+			if ($(obj).prop('checked')) {
+				if (val1) {
+					var strCookieValue = val1.substring(0, val1.lastIndexOf('-'));
+					var arrCookieValue = val1.split('-');
+					$checkedBoxes.each(function () {
+						var $this = $(this);
+						for (var i = 0; i < arrCookieValue.length; i++) { //如果有则不添加
+							if ($.trim($this.val()) == $.trim(arrCookieValue[i])) {
+								iscf = true;
+								break;
+							} else {
+								iscf = false;
+							}
+						}
+						if (!iscf) {
+							val1 = $.cookie(key1) + $this.val() + '-';
+							val2 = parseInt($.cookie(key2)) + 1;
+							$.cookie(key1, val1, { path: '/' });
+							$.cookie(key2, val2, { path: '/' });
+						}
+					});
+				} else {
+					var cookies = '';
+					$checkedBoxes.each(function () {
+						cookies = cookies + $(this).val() + '-';
+					});
+					$.cookie(key1, cookies, { path: '/' });
+					$.cookie(key2, $checkedBoxes.size(), { path: '/' });
+				}
+			} else {
+				//删除已选中cookie
+				if (val1) {
+					var newArrCookieValue = '';
+					var strCookieValue = val1.substring(0, val1.lastIndexOf('-'));
+					var arrCookieValue = strCookieValue.split('-');
+					$checkedBoxes.each(function () {
+						for (var i = 0; i < arrCookieValue.length; i++) {
+							if ($(this).val() == arrCookieValue[i]) {
+								iscf = true;
+								break;
+							} else {
+								iscf = false;
+							}
+						}
+						if (iscf) {
+							arrCookieValue.splice($.inArray($(this).val(), arrCookieValue), 1);
+							newArrCookieValue = arrCookieValue.join('-') + '-';
+							if (arrCookieValue != null && arrCookieValue != '') {
+								$.cookie(key1, null, { path: '/' });
+							} else {
+								$.cookie(key1, newArrCookieValue, { path: '/' });
+							}
+						}
+					});
+				}
+				if (parseInt($.cookie(key2)) < parseInt($checkedBoxes.size())) {
+					$.cookie(key2, 0, { path: '/' });
+				} else {
+					$.cookie(key2, (val2 - $checkedBoxes.size()), { path: '/' });
+				}
+			}
+		}
+
+		/** 清空指定的cookie */
+		function clearCookie(key1, key2) {
+			$.cookie(key1, null, { path: '/' });
+			$.cookie(key2, null, { path: '/' });
+		}
+
+	</script> -->
+<!-- 
+	<script type="text/javascript" src="./subTqbAdd_files/init.js.download"></script> -->
+	<link type="text/css" rel="stylesheet" href="./subTqbAdd_files/control.css">
+	<!-- <script type="text/javascript" src="./subTqbAdd_files/jquery.easing.1.3.js.download"></script>
+	<script type="text/javascript" src="./subTqbAdd_files/stepBar.js.download"></script> -->
+	<link href="./subTqbAdd_files/introjs.css" rel="stylesheet" type="text/css">
+	<link href="./subTqbAdd_files/introjs-flattener.css" rel="stylesheet" type="text/css">
+	<!-- <script src="./subTqbAdd_files/intro.js.download" type="text/javascript"></script> -->
+	<style>
+		.select2 {
+			width: 80%;
+		}
+
+		table td.title-td {
+			width: 15%;
+		}
+
+		table td.content-td {
+			width: 35%;
+		}
+
+		.notification1 {
+			background-color: #f68484;
+			border-radius: 6px;
+			font: bold 12px Arial;
+			color: #ffffff;
+			line-height: 20px;
+			min-width: 80px;
+			text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+			padding: 3px 5px 2px 3px;
+			margin-left: 4px;
+		}
+
+		.input-append {
+			display: inline-block;
+			margin-bottom: 0;
+			vertical-align: middle;
+		}
+
+		#goto-top {
+			position: fixed;
+			display: none;
+			bottom: 50px;
+			right: 50px;
+		}
+	</style>
+	<!-- <script type="text/javascript">
+		$(function () {
+			//提示信息设置
+			var messageSet = '';
+			var useType = 'rz';
+			var assetType = $('select[name=subTqbType]').val();
+			if (assetType) assetType = assetType.replace('tqb', 'card');
+			var messageName = '';
+			if (messageSet != null && messageSet != '') {
+				var url = '/private/message/messageSet/info.action?useType=' + useType + '&assetType=' + assetType;
+				window.parent.layer.open({ content: url, type: 2, title: messageName, maxmin: true, shadeClose: false, area: [screen.width * 0.9 + 'px', screen.height * 0.7 + 'px'] });
+			}
+
+			$("#trFile").hide();
+			$(document).tooltip();
+
+			var djMo = $("#DJ").val();
+
+
+			var code = 'APPLY';
+			var size = $("tr[groupCode='" + code + "']:last td").size();
+			if (size == 2) {
+				$("tr[groupCode='" + code + "']:last").append("<td class='content-td' colspan='2'>&nbsp;</td>");
+			}
+
+			var code = 'REQUIRED';
+			var size = $("tr[groupCode='" + code + "']:last td").size();
+			if (size == 2) {
+				$("tr[groupCode='" + code + "']:last").append("<td class='content-td' colspan='2'>&nbsp;</td>");
+			}
+
+			var code = 'OTHER';
+			var size = $("tr[groupCode='" + code + "']:last td").size();
+			if (size == 2) {
+				$("tr[groupCode='" + code + "']:last").append("<td class='content-td' colspan='2'>&nbsp;</td>");
+			}
+
+			var code = 'creater';
+			var size = $("tr[groupCode='" + code + "']:last td").size();
+			if (size == 2) {
+				$("tr[groupCode='" + code + "']:last").append("<td class='content-td' colspan='2'>&nbsp;</td>");
+			}
+
+
+			var selectType = '';
+			var parentId = '-1';
+			if (selectType == 'secondTqb' || parentId != '-1') { //二次报账
+				$('input, select, textarea').attr('disabled', true);
+				$("input[name='tqbRelation.tqbMoney']").attr('disabled', false);
+				$(".formButton").attr('disabled', false);
+			}
+
+			$("#DJ").bind("change", function () {
+				addZJtoJFLY();
+
+			});
+			$("#SL").bind("change", function (data) {
+				addZJtoJFLY();
+			});
+
+			//默认不显示：币种、原币单价、外贸合同号、是否免税，
+			var ghqd = '';
+			if ($("#tabletype").val() == "tqb_equipment") {
+				if (ghqd == '0') {
+					$('#DJ').attr("readonly", "readonly");
+				} else {
+					$('#DJ').removeAttr("readonly");
+				}
+			}
+			$('#GHQD').change(function () {
+				var ghqd = $('#GHQD').val();
+				if (ghqd == '0') {
+					$('#DJ').attr("readonly", "readonly");
+				} else {
+					$('#DJ').removeAttr("readonly");
+				}
+
+			});
+
+			var ztnum = '';//获取报账单状态
+			var step = ztnum;//进度显示节点
+			if (ztnum == 1) {//请补充下报账单状态对应的节点位置
+				step = 1;
+			} else if (ztnum == 1) {
+				step = 2;
+			} else if (ztnum == 2) {
+				step = 3;
+			} else if (ztnum == 10 || ztnum == 20) {
+				step = 4;
+			} else if (ztnum == 30) {
+				step = 5;
+			} else if (ztnum == 40) {
+				step = 6;
+			} else {
+				step = 1;
+			}
+			stepBar.init("stepBar", {//加载动画效果,默认完成的节点为step的数字大小
+				step: step
+			});
+
+			//置顶
+			$(window).scroll(function () {
+				var w_height = $(window).height();
+				var scroll_top = $(document).scrollTop();
+				if ($(window).scrollTop() > 100) {
+					$("#goto-top").fadeIn(500);
+				} else {
+					$("#goto-top").fadeOut(500);
+				}
+			});
+			$("#goto-top").click(function (e) {
+				e.preventDefault();
+				$(document.documentElement).animate({ scrollTop: 0 }, 200);
+				$(document.body).animate({ scrollTop: 0 }, 200);
+			});
+		});
+
+
+		function addZJtoJFLY() {
+			var dj = $("#DJ").val();
+			var sl = $("#SL").val();
+			var zj;
+			if (dj != null && dj != "" && sl != null && sl != "") {
+				if (dj == parseFloat(dj) && sl == parseFloat(sl)) {
+					zj = dj * sl;
+					$("#ZJ").val(zj);
+					if ($("#jfly-single").attr("checked") == "checked") {
+						var jfly = $("#jfly-single-no").val() + ":" + zj + ";";
+						$("#jflyId").val(jfly);
+					}
+				}
+			}
+		}
+
+		function toIndex() {
+			window.location.href = "/private/front/index.action";
+		}
+
+		function openIntegratedTqb() {
+			//window.open("/private/tqb/manage/integrated/mylist.action");
+			window.location.href = "/private/tqb/manage/integrated/mylist.action?temp=system";
+		}
+
+		function formCheck() {
+			if ($("#tqbInputForm").checkForm() == false) {
+				return false;
+			}
+			return true;
+		}
+
+		//暂存
+		function subForm(flag) {
+			//解决重复保存bug
+			$("#btnSubmit").attr("disabled", true);
+			$('input, select, textarea').attr('disabled', false);
+			var options = {
+				dataType: 'json',
+				url: '/private/tqb/manage/integrated/saveOrUpdateSubTqb.action',
+				success: function (data) {
+					if (data.code === 200) {
+						var index = layer.alert("保存成功！", function () {
+							layer.close(index);
+							if (flag == '1') { //保存并继续
+								tqbRelationId = data.object;
+								window.location.href = "/private/tqb/manage/integrated/subTqbEdit.action?tqbRelation.id=" + tqbRelationId + "&subTqbType=tqb_gzp&temp=system";
+							}
+						});
+					} else {
+						layer.alert(data.message);
+					}
+					$("#btnSubmit").attr("disabled", false);
+				},
+				error: function (result) {
+					layer.alert("保存报账单失败!");
+				}
+			};
+			$('#tqbInputForm').ajaxSubmit(options);
+		}
+
+		function backWin() {
+			window.location.href = "/private/tqb/manage/integrated/subTqbList.action?id=";
+		}
+
+		function changeTqbType(obj) {
+			var subTqbType = $(obj).val();
+			window.location.href = "/private/tqb/manage/integrated/subTqbAdd.action?subTqbType=" + subTqbType + "&temp=system";
+		}
+
+		//打开选择主件页面
+		function select_ZJ() {
+			var sl = $("#SL").val();
+			if (sl) {
+				var url = "/private/card/manage/t_card_equipment/selectZJ.action";
+				layer.open({ content: url, type: 2, title: '选择主机', maxmin: true, shadeClose: false, area: [screen.width * 0.9 + 'px', screen.height * 0.8 + 'px'] });
+			} else {
+				layer.alert("请先填写附件数量。");
+			}
+		}
+
+		//获取附件数量
+		function get_SL() {
+			var sl = $('input#SL').val();
+			return sl;
+		}
+
+		function set_ZJ(zjbh, zjmc, zjxh, zjzj) {
+			$('input#ZJBH').val(zjbh);
+			$('input#ZJMC').val(zjmc);
+			$('input#ZJXH').val(zjxh);
+			$('input#ZJZJ').val(zjzj);
+		}
+
+		function setZJ(id) {
+			$.post('/private/bzdcard/manage/t_card_equipment/findZJ.action',
+				{ id: id },
+				function (data) {
+					if (data.ID != null) {
+						$("#ZJBH").val(data.BH);
+						$("#ZJMC").val(data.MC);
+						$("#ZJXH").val(data.XH);
+						$("#ZJZJ").val(data.ZJ);
+					} else {
+						$("#ZJBH").val("");
+						$("#ZJMC").val("");
+						$("#ZJXH").val("");
+						$("#ZJZJ").val("");
+					}
+				});
+		}
+
+
+		function selectTqbList(selectType, title) {
+			var url = "/private/tqb/manage/integrated/selectList.action?selectType=" + selectType + "&subTqbType=" + $("#tabletype").val();
+			if (self == top) {
+				layer.open({ anim: 2, content: url, type: 2, title: title, maxmin: true, shadeClose: true, area: [screen.width * 0.9 + 'px', screen.height * 0.7 + 'px'] });
+			} else {
+				layer.open({ anim: 2, content: url, type: 2, title: title, maxmin: true, shadeClose: true, area: [screen.width * 0.75 + "px", screen.height * 0.65 + "px"] });
+			}
+		}
+
+		function selectSgdList(title) {
+			var url = "/private/tqb/manage/integrated/selectSgdList.action?subTqbType=tqb_gzp";
+			if (self == top) {
+				layer.open({ anim: 2, content: url, type: 2, title: title, maxmin: true, shadeClose: true, area: [screen.width * 0.9 + 'px', screen.height * 0.7 + 'px'] });
+			} else {
+				layer.open({ anim: 2, content: url, type: 2, title: title, maxmin: true, shadeClose: true, area: [screen.width * 0.75 + "px", screen.height * 0.65 + "px"] });
+			}
+		}
+
+		//计算累计报账金额
+		function sumReallyMoney() {
+			var tqbMoney = $("input[name='tqbRelation.tqbMoney']").val(); //本次报账金额 输入值
+			if (tqbMoney == '') {
+				tqbMoney = 0;
+			}
+			var reallyMoney = $("#reallyMoneyHidden").val();
+			if (typeof (reallyMoney) == 'undefined' || reallyMoney == '') {
+				reallyMoney = '' == '' ? 0 : '';
+			}
+			var tqbMoneyDb = ''; //保存后的本次报账金额
+			if (tqbMoneyDb == '') {
+				tqbMoneyDb = 0;
+			}
+			var reallyMoneyNew = 0;
+			var tqbRelationId = '';
+			if (tqbRelationId == '') {
+				reallyMoneyNew = parseFloat(tqbMoney) + parseFloat(reallyMoney);
+			} else {
+				reallyMoneyNew = parseFloat(tqbMoney) + parseFloat(reallyMoney) - parseFloat(tqbMoneyDb);
+			}
+			var zj = $("#ZJ").val(); //总价
+			if (zj == '') {
+				zj = 0;
+			}
+			if (reallyMoneyNew > parseFloat(zj)) {
+				_systemUI.alert("累计报账金额不能大于总价！");
+				$("input[name='tqbRelation.tqbMoney']").val('');
+				$("input[name='tqbRelation.reallyMoney']").val(reallyMoney);
+				return false;
+			}
+			$("input[name='tqbRelation.reallyMoney']").val(reallyMoneyNew);
+		}
+
+		function selectToTqb(tqbRelationId, selectType) {
+			$.ajax({
+				cache: true,
+				type: "POST",
+				url: "/private/tqb/manage/integrated/subTqbExtract.action?tqbRelation.id=" + tqbRelationId + "&subTqbType=tqb_gzp&temp=system&selectType=" + selectType,
+				async: false,
+				dataType: 'json',
+				error: function (request) {
+
+				},
+				success: function (data) {
+					var tabletype = data.object.TABLE_NAME.substring(2, data.object.TABLE_NAME.length);
+					if (tabletype) {
+						$('#tabletype').val(tabletype);
+						$('#tabletype').siblings('div').find('a:first span:first').text($('#tabletype').find('option:selected').text());
+					}
+					if (data.object.GHQD == '1') {
+						//1.显示字段
+						$('#SFMS').parent('td').show();
+						$('#SFMS').parent('td').prev('td').show();
+						$('#YBZL').parent('td').show();
+						$('#YBZL').parent('td').prev('td').show();
+						$('#YBDJ').parent('td').show();
+						$('#YBDJ').parent('td').prev('td').show();
+						$('#WMHTH').parent('td').show();
+						$('#WMHTH').parent('td').prev('td').show();
+						//2.还原刚进页面时的必填情况
+						$('#SFMS').attr('validation', sfms);
+						$('#YBZL').attr('validation', ybzl);
+						$('#YBDJ').attr('validation', ybdj);
+						$('#WMHTH').attr('validation', wmhth);
+						$('#DJ').removeAttr("readonly");
+					} else {
+						$('#DJ').attr("readonly", "readonly")
+					}
+
+					for (var p in data.object) {
+						$('#' + p).val(data.object[p]);
+						if ($('#' + p).prop('tagName') == 'SELECT') {
+							$('#' + p).siblings('div').find('a:first span:first').text($('#' + p).find('option:selected').text());
+						} else if ($('#' + p).hasClass('Wdate') && data.object[p]) {
+							$('#' + p).val(formatDate(new Date(data.object[p])));
+						}
+					}
+
+					for (var p in data.object) {
+						$('#' + p + 'Id').val(data.object[p]);
+						$('#' + p + 'Name').val(data.object[p]);
+					}
+				}
+			});
+			//window.location.href = "/private/tqb/manage/integrated/subTqbEdit.action?tqbRelation.id="+tqbRelationId+"&subTqbType=tqb_gzp&temp=system&selectType="+selectType ;
+		}
+
+		//提取申购单
+		function selectToSgd(id) {
+			$.ajax({
+				cache: true,
+				type: "POST",
+				url: "/private/tqb/manage/integrated/extract.action?id=" + id + "&subTqbType=tqb_gzp&temp=system",
+				async: false,
+				dataType: 'json',
+				error: function (request) {
+					layer.alert('网络异常！');
+				},
+				success: function (data) {
+					if (data.object.GHQD == '1') {
+						$('#DJ').removeAttr("readonly");
+					} else {
+						$('#DJ').attr("readonly", "readonly")
+					}
+					for (var p in data.object) {
+						$('#' + p).val(data.object[p]);
+						if ($('#' + p).prop('tagName') == 'SELECT') {
+							$('#' + p).siblings('div').find('a:first span:first').text($('#' + p).find('option:selected').text());
+						} else if ($('#' + p).hasClass('Wdate') && data.object[p]) {
+							$('#' + p).val(formatDate(new Date(data.object[p])));
+						}
+					}
+				}
+			});
+		}
+
+		/***** 提取设备申购单（第三方接口）   *****/
+		function selectToSgdToZJ(id, contractJson) {
+			$.ajax({
+				cache: true,
+				type: "POST",
+				url: "/private/tqb/manage/integrated/extract.action?id=" + id + "&subTqbType=tqb_gzp&temp=system",
+				async: false,
+				dataType: 'json',
+				success: function (data) {
+					/***** 1.通过第三方接口获取验收单号，验收日期，出厂号，生产厂家，型号，规格等  ****/
+					if (contractJson) {
+						data.object.YSDH = contractJson.YSDH; //验收单号
+						data.object.YSRQ = contractJson.YSRQ; //验收日期
+						data.object.CCH = contractJson.CCH;   //出厂号
+						data.object.PP = contractJson.PP;     //品牌
+						data.object.SCCJ = contractJson.SCCJ; //生产厂家
+						data.object.XH = contractJson.XH;     //型号
+						data.object.GG = contractJson.GG;     //规格
+						data.object.LYMC = contractJson.LYMC; //楼宇名称
+						data.object.AZDD = contractJson.AZDD; //安置地
+						data.object.GHQD = contractJson.GHQD; //是否进口
+					}
+
+					if (data.object.GHQD == '1') {
+						//1.显示字段
+						$('#SFMS').parent('td').show();
+						$('#SFMS').parent('td').prev('td').show();
+						$('#YBZL').parent('td').show();
+						$('#YBZL').parent('td').prev('td').show();
+						$('#YBDJ').parent('td').show();
+						$('#YBDJ').parent('td').prev('td').show();
+						$('#WMHTH').parent('td').show();
+						$('#WMHTH').parent('td').prev('td').show();
+						//2.还原刚进页面时的必填情况
+						$('#SFMS').attr('validation', sfms);
+						$('#YBZL').attr('validation', ybzl);
+						$('#YBDJ').attr('validation', ybdj);
+						$('#WMHTH').attr('validation', wmhth);
+						$('#DJ').removeAttr("readonly");
+					} else {
+						$('#DJ').attr("readonly", "readonly")
+					}
+
+					/** 2.写死字段（没办法只好写死） ***/
+					if (data && data.object && data.object.LYMC) {
+						//$('#LYMCName').val(data.object.LYMC);
+						$('#LYMCName').val(contractJson.LYMCNAME);
+						$('#LYMCId').val(data.object.LYMC);
+					}
+					/** 3.下面是根据元素属性ID来自动分配的  ***/
+					for (var p in data.object) {
+						$('#' + p).val(data.object[p]);
+						if ($('#' + p).prop('tagName') == 'SELECT') {
+							$('#' + p).siblings('div').find('a:first span:first').text($('#' + p).find('option:selected').text());
+						} else if ($('#' + p).hasClass('Wdate') && data.object[p]) {
+							$('#' + p).val(formatDate(new Date(data.object[p])));
+						}
+					}
+				},
+				error: function (request) {
+					layer.alert("网络异常！");
+				},
+			});
+		}
+
+		//发票上传
+		function attchList(id, tableName) {
+			var unitPrice = '';
+			var fileType = '';
+			var defaultFileTypeOne = '';
+			var defaultFileTypeTwo = '';
+			var typeValue = "";
+			if (tableName == 't_tqb_equipment_gzp') {
+				typeValue = "1,8";
+			} else if (tableName == 't_tqb_furniture') {
+				typeValue = "1,6";
+			} else {
+				typeValue = "1";
+			}
+			var url = "/private/tqb/manage/" + tableName + "/attachmentList.action?id=" + id + '&unitPrice=' + unitPrice + '&fileType=' + fileType + '&defaultFileTypeOne=' + defaultFileTypeOne + '&defaultFileTypeTwo=' + defaultFileTypeTwo + '&typeValue=' + typeValue;
+			if (self != top) {
+				window.parent.layer.open({ anim: 2, content: url, type: 2, title: '文件管理', maxmin: true, shadeClose: true, area: [screen.width * 0.8 + 'px', screen.height * 0.7 + 'px'] });
+			} else {
+				layer.open({ anim: 2, content: url, type: 2, title: '文件管理', maxmin: true, shadeClose: true, area: [screen.width * 0.8 + 'px', screen.height * 0.7 + 'px'] });
+			}
+		}
+
+		//提交申请
+		function sub(url) {
+			$('input, select, textarea').attr('disabled', false);
+			//去除必填验证
+			if ($('#GHQD').val() == '0' || $('#GHQD').val() == '') {
+				$('#WMHTH').attr('validation', '');
+				$('#YBZL').attr('validation', '');
+				$('#YBDJ').attr('validation', '');
+			}
+			if (formCheck()) {
+				$('#processSub').attr('disabled', true);
+				var index = layer.confirm('确认提交？提交后不能修改！', function () {
+					layer.close(index);
+					var options = {
+						dataType: 'json',
+						url: url,
+						success: function (data) {
+							if (_commonUI.hasObject(data.code) && data.code == 200) {
+								layer.alert(data.message, function () {
+									if ('system' == 'system') {
+										window.location.href = "/private/tqb/manage/integrated/mylist.action?temp=system";
+									} else {
+										window.location.href = "/private/tqb/manage/integrated/list.action?temp=system";
+									}
+								});
+							} else {
+								var url = "/private/tqb/manage/integrated/subTqbEdit.action?tqbRelation.id=" + data.object + "&subTqbType=tqb_gzp&temp=system";
+								promptMessage(url, data.message);
+							}
+							$('#processSub').attr('disabled', false);
+						},
+						error: function (result) {
+							layer.msg("提交审批失败!");
+							$('#processSub').attr('disabled', false);
+						}
+					};
+					$('#tqbInputForm').ajaxSubmit(options);
+				});
+			} else {
+				if ('' == 'secondTqb' || '-1' != '-1') { //二次报账
+					$('input, select, textarea').attr('disabled', true);
+				} else {
+					$('input, select, textarea').attr('disabled', false);
+				}
+				$("input[name='tqbRelation.tqbMoney']").attr('disabled', false);
+				$(".formButton").attr('disabled', false);
+
+				var valiError = $(".validation_error").eq(0);
+				if ($(valiError).hasClass("Wdate")) {
+					//日期选择器的时候聚焦会乱，暂时不聚焦
+					//$(valiError).focus();
+				} else {
+					$(valiError).focus();
+				}
+			}
+		}
+
+		//伸缩分组信息
+		function groupTelescopic(obj, groupCode) {
+			var type = $(obj).attr("type");
+			if (type == 'shrink') { //分组字段信息为展开的，点击后变成收缩
+				$(document).find("tr[groupCode='" + groupCode + "']").css("display", "none");
+				$(obj).find("img").attr("src", "/images/front/tqb/open.png");
+				$(obj).attr("type", "open");
+			}
+			if (type == 'open') {
+				$(document).find("tr[groupCode='" + groupCode + "']").css("display", "");
+				$(obj).find("img").attr("src", "/images/front/tqb/shrink.png");
+				$(obj).attr("type", "shrink");
+			}
+		}
+
+
+		function download1() {
+			var url1 = "/private/tqb/manage/integrated/downfile.action?id=" + $("#tqbRelationId").val() + "&tableName=" + $("#tableName").val();
+			window.open(url1);
+		}
+
+		function upload(obj) {
+			$('div#div_tampfile_2').show().append("<input id=\"tampfile_2\" type=\"file\" name=\"file\" validation=\"name[模板],empty\"><a style=\"cursor: pointer;\" onclick=\"cancelUpload(this);\">取消</a>");
+			$('div#div_tampfile_1').hide();
+		}
+
+		function cancelUpload(obj) {
+			$('div#div_tampfile_2').hide().empty();
+			$('div#div_tampfile_1').show();
+		}
+
+		function startIntro() {
+			var intro = introJs();
+			intro.setOptions({
+				steps: [
+					{
+						element: '#step1',
+						intro: "想做<span style='color: blue; font-weight: bold;'>申购采购</span>？请点击进入哦",
+						position: 'bottom'
+					},
+					{
+						element: '#step2',
+						intro: "想做<span style='color: blue; font-weight: bold;'>资产入账</span>？快点击我进入办理哈~",
+						position: 'bottom'
+					},
+					{
+						element: '#stepBar',
+						intro: "想做资产<span style='color: red; font-weight: bold;'>报废</span>、<span style='color: blue; font-weight: bold;'>报失</span>等业务？请点击相应图标办理哦.",
+						position: 'bottom-middle-aligned'
+					}
+					/* {
+					   element: '#step4',
+					   intro: "此处可以查看个人名下<span style='color: blue; font-weight: bold;'>各类型</span>资产信息.",
+					   position: 'bottom-middle-aligned'
+					 },
+					 {
+					   element: '#step5',
+					   intro: "这里可以查看<span style='color: blue; font-weight: bold;'>系统通知</span>、<span style='color: red; font-weight: bold;'>个人信息</span>、<span style='color: green; font-weight: bold;'>管理中心</span>.",
+					   position: 'bottom-middle-aligned'
+					 }*/
+				],
+				nextLabel: "下一步",
+				prevLabel: "上一步",
+				skipLabel: "跳过",
+				doneLabel: "我知道啦",
+				exitOnOverlayClick: false,
+				showBullets: false,
+				showProgress: true,
+				showStepNumbers: false,
+				overlayOpacity: 0.8,
+				hidePrev: true,
+				hideNext: true,
+				disableInteraction: true,
+				tooltipClass: "",
+				scrollPadding: 100,
+				highlightClass: ""
+			});
+			intro.start();
+			//intro.setOptions({ 'skipLabel': 'Exit', 'tooltipPosition': 'right' });
+			/*intro.oncomplete(function() {
+				 alert("end of introduction");
+			});*/
+
+		}
+
+		//查看提示信息
+		function infoView() {
+			var useType = 'rz';
+			var assetType = $('select[name=subTqbType]').val();
+			if (assetType) assetType = assetType.replace('tqb', 'card');
+			var url = '/private/message/messageSet/findMessage.action';
+			$.ajax({
+				url: url,
+				data: { useType: useType, assetType: assetType },
+				type: 'post',
+				dataType: 'json',
+				success: function (data) {
+					if (data != null) {
+						url = '/private/message/messageSet/infoView.action?useType=' + useType + '&assetType=' + assetType;
+						window.parent.layer.open({ content: url, type: 2, title: data.NAME, maxmin: true, shadeClose: false, area: [screen.width * 0.8 + 'px', screen.height * 0.7 + 'px'] });
+					} else {
+						layer.alert('提示信息可能没有配置或者激活！先添加或者激活！');
+					}
+				}
+			});
+		}
+
+		//提示信息
+		function promptMessage(url, message) {
+			var index = layer.open({
+				title: ['温馨提示'],
+				content: '<div style="color:red;">' + message + '</div>',
+				btn: ['确定', '取消'],
+				shadeClose: true,
+				//回调函数  
+				yes: function (index, layero) {
+					layer.close(index);
+					window.location.href = url;
+				},
+				btn2: function (index, layero) {
+					//self.location='';//取消按钮  
+					window.location.href = url;
+				},
+				cancel: function (index, layero) { //按右上角“X”按钮  
+					//self.location='';  
+					window.location.href = url;
+				}
+			});
+		}
+
+		//将时间戳转为日期格式
+		function formatDate(now) {
+			var year = now.getFullYear();
+			var month = now.getMonth() + 1;
+			var date = now.getDate();
+			var hour = now.getHours();
+			var minute = now.getMinutes();
+			var second = now.getSeconds();
+			return year + '-' + month + '-' + date;
+		}
+	</script> -->
+</head>
+
+<body>
+
+
+
+
+
+	<title>资产管理系统</title>
+
+
+
+	<link href="./subTqbAdd_files/style_comm.css" rel="stylesheet" type="text/css">
+	<link href="./subTqbAdd_files/icons.css" rel="stylesheet">
+	<link href="./subTqbAdd_files/bootstrap.css" rel="stylesheet">
+	<link href="./subTqbAdd_files/main.css" rel="stylesheet">
+	<link href="./subTqbAdd_files/2_bsdt.css" rel="stylesheet">
+	<!-- <script type="text/javascript" src="./subTqbAdd_files/pageSwitch.min.js.download"></script> -->
+
+	<!-- <script type="text/javascript">
+		 function toIndex() {
+			 window.location.href = "/private/front/index.action";
+		 }
+		 function toPerson() {
+			 window.location.href = "/private/front/index.action";
+		 }
+
+		 function userInfo() {
+			 layer.open({ content: '/private/user/form.action', type: 2, title: '个人信息', maxmin: true, shadeClose: true, area: [screen.width * 0.50 + 'px', screen.height * 0.60 + 'px'] });
+		 }
+
+	</script>
+ -->
+
+
+	<!-- <script src="./subTqbAdd_files/bootstrap.js.download"></script> -->
+<!-- 
+	<script>
+		/* 
+		 * 这个功能是表示根据未读消息和用户的userId查询，该用户下的未读消息。
+		 * 这个里面值得注意的是：传入的的status是表示数据库未读消息的状态，1:未读，2：已读。所以我在这里的status就直接传入1。
+		 * 
+		 */
+		$.ajax({
+			url: '/private/notify/notifyCount.action',
+			type: 'POST',
+			data: {
+				'notifyRecord.status': '1'
+			},
+			dataType: 'json',
+
+			//成功向头部的消息按钮插入后台获得的数据
+			success: function (resp) {
+				//这个是向消息的按钮插入从数据库遍历出来的值。
+				if (resp != 0) {
+					$("#newsCount").text(resp);
+				}
+			},
+			//如果后台传出的结果是报错的话，就不往消息中插入数据
+			error: function (err) {
+				$("#newsCount").text("");
+			}
+		});
+
+		function showNews() {
+			window.location.href = "/private/notify/list.action";
+		}
+
+	</script> -->
+
+
+	<div style="padding: 4px; width: 98%; padding-left: 2%;">
+		<div id="stepBar" class="ui-stepBar-wrap" style="border-radius: 4px; display: block;">
+			<div class="ui-stepBar">
+				<div class="ui-stepProcess" style="width: 0%;"></div>
+			</div>
+			<div class="ui-stepInfo-wrap">
+				<table class="ui-stepLayout" border="0" cellpadding="0" cellspacing="0" style="width: 1024px; margin-left: -75px;">
+					<tbody>
+						<tr align="center">
+							<td class="ui-stepInfo" style="width: 170px;">
+								<a class="ui-stepSequence judge-stepSequence-pre">1</a>
+								<p class="ui-stepName">填写报账单 </p>
+							</td>
+							<td class="ui-stepInfo" style="width: 170px;">
+								<a class="ui-stepSequence judge-stepSequence-hind">2</a>
+								<p class="ui-stepName">审核中</p>
+							</td>
+							<td class="ui-stepInfo" style="width: 170px;">
+								<a class="ui-stepSequence judge-stepSequence-hind">3</a>
+								<p class="ui-stepName">审核通过</p>
+							</td>
+							<td class="ui-stepInfo" style="width: 170px;">
+								<a class="ui-stepSequence judge-stepSequence-hind">4</a>
+								<p class="ui-stepName">已推送财务</p>
+							</td>
+							<td class="ui-stepInfo" style="width: 170px;">
+								<a class="ui-stepSequence judge-stepSequence-hind">5</a>
+								<p class="ui-stepName">已报账待建卡</p>
+							</td>
+							<td class="ui-stepInfo" style="width: 170px;">
+								<a class="ui-stepSequence judge-stepSequence-hind">6</a>
+								<p class="ui-stepName">已报账已建卡</p>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div style="padding: 4px; width: 98%;padding-left: 2%;">
+		<form id="tqbInputForm" class="form-horizontal" action="javascript:void(0)"
+		 method="post" enctype="multipart/form-data">
+			<input type="hidden" name="tqbRelation.id" value="" id="tqbRelationId">
+			<input type="hidden" name="tqbRelation.parentId" value="-1">
+			<input type="hidden" name="tableName" value="t_tqb_equipment_gzp" id="tableName">
+			<input type="hidden" id="flag" name="flag" value="">
+			<input type="hidden" name="selectType" value="">
+			<input type="hidden" name="tqbRelation.step" value="">
+			<table id="tqbTable" class="table table-striped table-bordered table-condensed">
+				<tbody>
+					<tr>
+						<td colspan="4" style="height: 35px;background: #DBDBDB;">
+							<span style="float: left;"><strong>新增报账单</strong></span>
+
+
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4" style="height: 35px;" align="center">
+							<button class="btn  btn-success" type="button" onclick="selectTqbList(&#39;unDone&#39;, &#39;未完成报账单&#39;);" style="cursor: pointer; width: 150px;font-weight:bolder;">未完成报账单 </button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<!-- <button class="btn-w-m" type="button" onclick="selectTqbList('copy', '复制报账单');" style="cursor: pointer;"/>复制</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+							<button id="step1" class="btn  btn-success" type="button" onclick="selectSgdList(&#39;申购单&#39;);" style="cursor: pointer;width: 150px;font-weight:bolder;">提取申购单<span class="notification1">1</span></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							<button class="btn  btn-success" type="button" onclick="openIntegratedTqb();" style="cursor: pointer;width: 150px;font-weight:bolder;">我的报账单</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+						</td>
+					</tr>
+					<input type="hidden" name="id" id="id" value="">
+					<input type="hidden" id="HTZJE" name="tqbRelation.ctTotalAmount" value="">
+
+					<tr id="step2">
+						<td>报账单类型：</td>
+						<td colspan="3">
+							<div class="select2-container" id="s2id_tabletype" style="width: 30%"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">高值元器件报账</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen1">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select name="subTqbType" id="tabletype" style="width: 30%" onchange="changeTqbType(this) ;" tabindex="-1" class="select2-offscreen">
+					
+					<option value="tqb_equipment">设备报账</option>
+					
+					<option value="tqb_attachment">附件报账</option>
+					
+					<option value="tqb_furniture">家具报账</option>
+					
+					<option value="tqb_lowvalue">低值品报账</option>
+					
+					<option value="tqb_software">软件报账</option>
+					
+					<option value="tqb_gzp" selected="selected">高值元器件报账</option>
+					
+				</select>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">带<b class="star">*</b>为必填项，可暂存，提交审核时必须填写完整</td>
+					</tr>
+
+					<tr>
+						<td colspan="4" style="height: 35px;background: #DBDBDB;">
+							<strong>申购信息</strong>&nbsp;&nbsp;<span style="cursor: pointer;" onclick="groupTelescopic(this, &#39;APPLY&#39;);"
+							 type="shrink"><img src="./subTqbAdd_files/shrink.png"></span>
+						</td>
+					</tr>
+
+					<tr groupcode="APPLY">
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							资产名称
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="MC" style="float:left;" type="text" name="MC" value="" class="form-control  " validation="name[资产名称],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请填写该资产使用说明书中的全称">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							型号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="XH" style="float:left;" type="text" name="XH" value="" class="form-control  " validation="name[型号],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请填写该资产使用说明书中的型号">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="APPLY">
+
+
+
+
+
+						<td class="listr2 title-td">
+							校区
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+							<div class="select2-container select2" id="s2id_XQ" style="float:left;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">--请选择--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen2">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select id="XQ" name="XQ" style="float:left;" class="select2 select2-offscreen" validation="name[校区],empty" tabindex="-1"> 
+							<option value="">--请选择--</option>
+							
+								<option value="JL">
+									九里提校区
+								</option>
+							
+								<option value="QS">
+									清水河校区
+								</option>
+							
+								<option value="QT">
+									其他
+								</option>
+							
+								<option value="SH">
+									沙河校区
+								</option>
+							
+				     	</select>
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请选择该资产的实际存放校区">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							规格
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="GG" style="float:left;" type="text" name="GG" value="" class="form-control  " validation="name[规格],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请按照该资产使用说明书中的技术参数进行填写">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="APPLY">
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							单价
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="DJ" style="float:left;" type="text" name="DJ" value="" class="form-control  number"  validation="name[单价],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请按发票中的含税单价填写">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							数量
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="SL" style="float:left;" type="text" name="SL" value="" class="form-control  number"  validation="name[数量],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="APPLY">
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							总价
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="ZJ" style="float:left;" type="text" name="ZJ" value="" class="form-control  number"  validation="name[总价],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							计量单位
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="JJDW" style="float:left;" type="text" name="JJDW" value="" class="form-control  " validation="name[计量单位],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="APPLY">
+
+
+
+
+
+						<td class="listr2 title-td">
+							采购组织形式
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<div class="select2-container select2-container-disabled select2" id="s2id_CGZZXS" style="float:left;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">--请选择--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen3" disabled="">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select id="CGZZXS" name="CGZZXS" style="float:left;" class="select2 select2-offscreen" disabled="" validation="name[采购组织形式],empty"
+							 tabindex="-1"> 
+							<option value="">--请选择--</option>
+							
+								<option value="1"> 批量集中采购 </option>
+									批量集中采购
+								
+							
+								<option value="2"> 集中采购 </option>
+									集中采购
+								
+							
+								<option value="3"> 分散采购 </option>
+									分散采购
+								
+							
+								<option value="4"> 其他 </option>
+									其他
+								
+							
+				     	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							供应商
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="GHS" style="float:left;" type="text" name="GHS" value="" class="form-control  "  validation="name[供应商],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="APPLY">
+
+
+
+
+
+						<td class="listr2 title-td">
+							合同号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="HTH" style="float:left;" type="text" name="HTH" value="" class="form-control  "  validation="name[合同号],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="进口设备必须填写采购合同中的合同编号">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							申购单号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="SGDH" style="float:left;" type="text" name="SGDH" value="" class="form-control  "  validation="name[申购单号],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="APPLY">
+
+
+
+
+
+						<td class="listr2 title-td">
+							经费卡号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="JFKH" style="float:left;" type="text" name="JFKH" value="" class="form-control  " validation="name[经费卡号],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="content-td" colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="4" style="height: 35px;background: #DBDBDB;">
+							<strong>必填信息</strong>&nbsp;&nbsp;<span style="cursor: pointer;" onclick="groupTelescopic(this, &#39;REQUIRED&#39;);"
+							 type="shrink"><img src="./subTqbAdd_files/shrink.png"></span>
+						</td>
+					</tr>
+
+					<tr groupcode="REQUIRED">
+
+
+
+
+						<td class="listr2 title-td">
+							报账单号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="BH" style="float:left;" type="text" name="BH" value="自动生成，无需填写" class="form-control  "  validation="name[报账单号],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="自动生成，无需填写">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							所属部门
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+
+
+
+
+							<div class="input-append" style="float:left;width:86%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<input type="text" id="BMBHName"  style="width: %;height:px;float: left;" class="form-control" name=""
+								 value="" validation="name[所属部门],empty">
+								<input id="BMBHNo" type="hidden" name="BMBH" value="">
+								<!--<input type="button" id="BMBHBn" value="选择 " style="width: px;height: px;background-color: #B2D0E6;" onclick="select_BMBH();" />-->
+								<!--<input type="button" class="btn btn-outline btn-default" value="选择 " style="width: px;height: px;margin-left: 5px;" onclick="select_BMBH();"/>-->
+								<a id="BMBHButton" href="javascript:" class="btn  " style="">&nbsp;<i class="icon-search"></i>&nbsp;</a>&nbsp;&nbsp;
+								<!-- <script type="text/javascript">
+									$(function () {
+										var d = ''.split('|');//
+										if (d.length > 0) {//
+											$('#BMBHNo').val(d[0]);//
+										}
+										var url = '/private/department/departmentSelect.action?dataScope=&onlyShowCurrentChild=&eventId=BMBH';
+
+										if ('') {
+
+											if (false) {
+												url = '/private/department/departmentSelect.action?onlyShowCurrentChild=&eventId=BMBH';
+											}
+
+										}
+										//部门选择
+										$("#BMBHButton, #BMBHName").click(function () {
+											layer.open({
+												anim: 2,
+												content: url,
+												type: 2,
+												title: '部门选择',
+												maxmin: true,
+												shadeClose: true,
+												area: [screen.width * 0.6 + 'px', screen.height * 0.65 + 'px']
+
+											});
+										});
+
+
+
+									})
+
+
+
+									function get_BMBH(departmentNo, departmentName) {
+										$('#BMBHNo').val(departmentNo);
+										$('#BMBHName').val(departmentName);
+
+										$.ajax({
+											type: 'POST',
+											url: "/private/department/getYtByBm.action",
+											data: { "departmentNo": departmentNo },
+											success: function (data) {
+												$("#YT").val(data);
+											}
+										})
+
+
+										$.ajax({
+											type: 'POST',
+											url: "/private/department/getFirstBm.action",
+											dateType: 'json',
+											data: { "departmentNo": departmentNo },
+											success: function (data) {
+												$("#YJBMName").val(data.name);
+												$("#YJBMNo").val(data.bh);
+											}
+										})
+
+										//获取部门性质
+										var isglbmxz = 'true';
+										if (isglbmxz == 'true') {
+											$.ajax({
+												url: '/private/department/findBmxz.action',
+												type: 'post',
+												data: { departmentNo: departmentNo },
+												dataType: 'json',
+												success: function (data) {
+													if (data) {
+														$('#BMXZName').val(data.MC);
+														$('#BMXZNo').val(data.NO);
+													}
+												},
+												error: function () {
+													layer.alert('网络异常！');
+												}
+											});
+										}
+									}
+
+									//是否是父节点
+									function isParent(node) {
+										var isParent = node.state;
+										var isSelectParent = 'true';
+										if (isParent) {
+											if (isSelectParent && isSelectParent == 'false') return true;
+										}
+										return false;
+									}
+
+									//是否根节点
+									function isRoot(node) {
+										var isRoot = node.state;
+										var isSelectRoot = 'true';
+										if (isRoot == 'open') {
+											if (isSelectRoot && isSelectRoot == 'false') return true;
+										}
+										return false;
+									}
+
+									function isSelectParent() {
+										var isSelectParent = "true";
+										if (isSelectParent && isSelectParent == "false") {
+											return true;
+										}
+										return false;
+									}
+								</script> -->
+
+
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="REQUIRED">
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							发票号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="FPH" style="float:left;" type="text" name="FPH" value="" class="form-control  " validation="name[发票号],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							保管人
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<div class="input-append" style="width:86%;float:left;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<input type="text" id="BGRName"  style="width: %;height:px;float: left;" class="form-control" name=""
+								 value="" validation="name[保管人],empty">
+								<input id="BGRId" type="hidden" name="BGR" value="">
+								<!--<input type="button"  value="选择 " class="btn btn-outline btn-default" style="height:px;text-align: center;margin-left: 5px;" onclick="select_BGR();" />-->
+								<a id="BGRButton" href="javascript:" class="btn  " style="">&nbsp;<i class="icon-search"></i>&nbsp;</a>&nbsp;&nbsp;
+								<!-- <script type="text/javascript">
+									//用户选择
+									$("#BGRButton, #BGRName").click(function () {
+										//做回显设置
+										var userIds = $('#BGRId').val();
+										var url = '/public/user/choose/init.action?isMultiple=false&eventId=BGR&departmenNo=&userIds=' + userIds + '&user.userInfo.isJob=1';
+										//window.open(url,"人员选择","width="+screen.width*0.6+",height="+screen.height*0.7+",top=100,left=200,scrollbars=yes,resizable=yes");	
+										//showMessageDialog(url, "人员选择", screen.width*0.6, screen.height*0.7, true) ;
+										layer.open({ anim: 2, content: url, type: 2, title: '人员选择', maxmin: true, shadeClose: true, area: [screen.width * 0.6 + 'px', screen.height * 0.6 + 'px'] });
+									});
+
+									function get_BGR(userId, username) {
+										$('#BGRId').val(userId);
+										$('#BGRName').val(username);
+									}
+
+								</script> -->
+
+
+							</div>
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="该资产的负责人，必须是在职职工">
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="REQUIRED">
+
+
+
+
+
+						<td class="listr2 title-td">
+							购置日期
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="GZRQ" style="cursor:pointer;float: left;" name="GZRQ" type="text" maxlength="20" class="Wdate" value="" onfocus="WdatePicker({isShowClear:false,readOnly:true,lang:&#39;zh-cn&#39;,dateFmt:&#39;yyyy-MM-dd&#39; })"
+							 onclick="WdatePicker({lang:&#39;zh-cn&#39;})" validation="name[购置日期],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请选择发票中的日期">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							楼宇名称
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+							<div class="input-append" style="float:left;width:86%;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+								<!-- 控件的只读使用readOnly属性是不行的  ,新加属性isRead（0：可读，1：只读） -->
+
+								<input type="text" id="LYMCName"  style="width: %;height:px;float: left;" class="form-control" name=""
+								 value="" validation="name[楼宇名称],empty">
+								<input id="LYMCId" type="hidden" name="LYMC" value="">
+								<a id="LYMCButton" href="javascript:" class="btn  " style="">&nbsp;<i class="icon-search"></i>&nbsp;</a>&nbsp;&nbsp;
+
+<!-- 
+								<script type="text/javascript">
+									$(function () {
+										$("#XQ").change(function () {
+											$('#LYMCId').val('');
+											$('#LYMCName').val('');
+										});
+									})
+
+									//楼宇选择选择
+									$("#LYMCButton, #LYMCName").click(function () {
+										var xq = $('#XQ').val();
+										if (xq == null || xq == '') {
+											$.messager.alert('提示信息', '请先选择校区', 'error');
+											return;
+										}
+										var url = '/public/plugins/building/choose/init.action?eventId=LYMC&campusNo=' + xq;
+										layer.open({ anim: 2, content: url, type: 2, title: '楼宇选择', maxmin: true, shadeClose: true, area: [screen.width * 0.6 + 'px', screen.height * 0.7 + 'px'] });
+									});
+
+									function get_LYMC(buildingNo, buildingName) {
+										$('#LYMCId').val(buildingNo);
+										$('#LYMCName').val(buildingName);
+									}
+
+								</script> -->
+
+
+							</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="REQUIRED">
+
+
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							安置地点
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+							<input id="AZDD" style="float:left;" type="text" name="AZDD" value="" class="form-control" validation="name[安置地点],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请填写房间号，附属医院须填写楼名和房间号">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							价值类型
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<div class="select2-container select2" id="s2id_JZLX" style="float:left;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">--请选择--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen4">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select id="JZLX" name="JZLX" style="float:left;" class="select2 select2-offscreen" validation="name[价值类型],empty"
+							 tabindex="-1"> 
+							<option value="">--请选择--</option>
+							
+								<option value="01"> 原值 </option>
+									原值
+								
+							
+								<option value="02"> 暂估值 </option>
+									暂估值
+								
+							
+								<option value="03"> 重置值 </option>
+									重置值
+								
+							
+								<option value="04"> 无价值 </option>
+									无价值
+								
+							
+								<option value="05"> 评估值 </option>
+									评估值
+								
+							
+								<option value="06"> 名义金额 </option>
+									名义金额
+								
+							
+				     	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="REQUIRED">
+
+
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							取得方式
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<div class="select2-container select2" id="s2id_QDFS" style="float:left;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">--请选择--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen5">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select id="QDFS" name="QDFS" style="float:left;" class="select2 select2-offscreen" validation="name[取得方式],empty"
+							 tabindex="-1"> 
+							<option value="">--请选择--</option>
+							
+								<option value="1"> 购置 </option>
+									购置
+								
+							
+								<option value="2"> 赠送（接收捐赠） </option>
+									赠送（接收捐赠）
+								
+							
+								<option value="3"> 自制 </option>
+									自制
+								
+							
+								<option value="4"> 调入 </option>
+									调入
+								
+							
+								<option value="5"> 盘盈 </option>
+									盘盈
+								
+							
+								<option value="6"> 结转 </option>
+									结转
+								
+							
+								<option value="7"> 自行研制 </option>
+									自行研制
+								
+							
+								<option value="8"> 其他 </option>
+									其他
+								
+							
+				     	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							经费科目
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<div class="select2-container select2" id="s2id_JFKM" style="float:left;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">--请选择--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen6">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select id="JFKM" name="JFKM" style="float:left;" class="select2 select2-offscreen" validation="name[经费科目],empty"
+							 tabindex="-1"> 
+							<option value="">--请选择--</option>
+							
+								<option value="1"> 教育经费 </option>
+									教育经费
+								
+							
+								<option value="2"> 科研经费 </option>
+									科研经费
+								
+							
+								<option value="3"> 基建经费 </option>
+									基建经费
+								
+							
+								<option value="4"> 自筹资金 </option>
+									自筹资金
+								
+							
+								<option value="5"> 世行贷款 </option>
+									世行贷款
+								
+							
+								<option value="6"> 捐赠 </option>
+									捐赠
+								
+							
+								<option value="7"> 其他经费 </option>
+									其他经费
+								
+							
+								<option value="8"> 后勤经费 </option>
+									后勤经费
+								
+							
+								<option value="A"> 研究生 </option>
+									研究生
+								
+							
+								<option value="B"> 配套 </option>
+									配套
+								
+							
+								<option value="C"> 行政 </option>
+									行政
+								
+							
+								<option value="D"> 211 </option>
+									211
+								
+							
+								<option value="F"> 985 </option>
+									985
+								
+							
+								<option value="X"> 重点实验室 </option>
+									重点实验室
+								
+							
+				     	</select>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="REQUIRED">
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							国别
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<div class="select2-container select2" id="s2id_GB" style="float:left;"><a href="javascript:void(0)" onclick="return false;" class="select2-choice" tabindex="-1">   <span class="select2-chosen">--请选择--</span><abbr class="select2-search-choice-close"></abbr>   <span class="select2-arrow"><b></b></span></a>
+								<input
+								 class="select2-focusser select2-offscreen" type="text" id="s2id_autogen7">
+									<div class="select2-drop select2-display-none select2-with-searchbox">
+										<div class="select2-search"> <input type="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" class="select2-input">											</div>
+										<ul class="select2-results"> </ul>
+									</div>
+							</div><select id="GB" name="GB" style="float:left;" class="select2 select2-offscreen" validation="name[国别],empty" tabindex="-1"> 
+							<option value="">--请选择--</option>
+							
+								<option value="000"> 未知 </option>
+									未知
+								
+							
+								<option value="004"> 阿富汗 </option>
+									阿富汗
+								
+							
+								<option value="008"> 阿尔巴尼亚 </option>
+									阿尔巴尼亚
+								
+							
+								<option value="010"> 南极洲 </option>
+									南极洲
+								
+							
+								<option value="012"> 阿尔及利亚 </option>
+									阿尔及利亚
+								
+							
+								<option value="016"> 美属萨摩亚 </option>
+									美属萨摩亚
+								
+							
+								<option value="020"> 安道尔 </option>
+									安道尔
+								
+							
+								<option value="024"> 安哥拉 </option>
+									安哥拉
+								
+							
+								<option value="028"> 安提瓜和巴布达 </option>
+									安提瓜和巴布达
+								
+							
+								<option value="031"> 阿塞拜疆 </option>
+									阿塞拜疆
+								
+							
+								<option value="032"> 阿根廷 </option>
+									阿根廷
+								
+							
+								<option value="036"> 澳大利亚 </option>
+									澳大利亚
+								
+							
+								<option value="040"> 奥地利 </option>
+									奥地利
+								
+							
+								<option value="044"> 巴哈马 </option>
+									巴哈马
+								
+							
+								<option value="048"> 巴林 </option>
+									巴林
+								
+							
+								<option value="050"> 孟加拉国 </option>
+									孟加拉国
+								
+							
+								<option value="051"> 亚美尼亚 </option>
+									亚美尼亚
+								
+							
+								<option value="052"> 巴巴多斯 </option>
+									巴巴多斯
+								
+							
+								<option value="056"> 比利时 </option>
+									比利时
+								
+							
+								<option value="060"> 百慕大 </option>
+									百慕大
+								
+							
+								<option value="064"> 不丹 </option>
+									不丹
+								
+							
+								<option value="068"> 玻利维亚 </option>
+									玻利维亚
+								
+							
+								<option value="070"> 波斯尼亚和黑塞哥维那 </option>
+									波斯尼亚和黑塞哥维那
+								
+							
+								<option value="072"> 博茨瓦纳 </option>
+									博茨瓦纳
+								
+							
+								<option value="074"> 布维岛 </option>
+									布维岛
+								
+							
+								<option value="076"> 巴西 </option>
+									巴西
+								
+							
+								<option value="084"> 伯利兹 </option>
+									伯利兹
+								
+							
+								<option value="086"> 英属印度洋领土 </option>
+									英属印度洋领土
+								
+							
+								<option value="090"> 所罗门群岛 </option>
+									所罗门群岛
+								
+							
+								<option value="092"> 英属维尔京群岛 </option>
+									英属维尔京群岛
+								
+							
+								<option value="096"> 文莱 </option>
+									文莱
+								
+							
+								<option value="100"> 保加利亚 </option>
+									保加利亚
+								
+							
+								<option value="104"> 缅甸 </option>
+									缅甸
+								
+							
+								<option value="108"> 布隆迪 </option>
+									布隆迪
+								
+							
+								<option value="112"> 白俄罗斯 </option>
+									白俄罗斯
+								
+							
+								<option value="116"> 柬埔寨 </option>
+									柬埔寨
+								
+							
+								<option value="120"> 喀麦隆 </option>
+									喀麦隆
+								
+							
+								<option value="124"> 加拿大 </option>
+									加拿大
+								
+							
+								<option value="132"> 佛得角 </option>
+									佛得角
+								
+							
+								<option value="136"> 开曼群岛 </option>
+									开曼群岛
+								
+							
+								<option value="140"> 中非 </option>
+									中非
+								
+							
+								<option value="144"> 斯里兰卡 </option>
+									斯里兰卡
+								
+							
+								<option value="148"> 乍得 </option>
+									乍得
+								
+							
+								<option value="152"> 智利 </option>
+									智利
+								
+							
+								<option value="156"> 中国 </option>
+									中国
+								
+							
+								<option value="158"> 中国台湾 </option>
+									中国台湾
+								
+							
+								<option value="162"> 圣诞岛 </option>
+									圣诞岛
+								
+							
+								<option value="166"> 科科斯(基林)群岛 </option>
+									科科斯(基林)群岛
+								
+							
+								<option value="170"> 哥伦比亚 </option>
+									哥伦比亚
+								
+							
+								<option value="174"> 科摩罗 </option>
+									科摩罗
+								
+							
+								<option value="175"> 马约特 </option>
+									马约特
+								
+							
+								<option value="178"> 刚果 </option>
+									刚果
+								
+							
+								<option value="180"> 扎伊尔 </option>
+									扎伊尔
+								
+							
+								<option value="184"> 库克群岛 </option>
+									库克群岛
+								
+							
+								<option value="188"> 哥斯达黎加 </option>
+									哥斯达黎加
+								
+							
+								<option value="191"> 克罗地亚 </option>
+									克罗地亚
+								
+							
+								<option value="192"> 古巴 </option>
+									古巴
+								
+							
+								<option value="196"> 塞浦路斯 </option>
+									塞浦路斯
+								
+							
+								<option value="203"> 捷克 </option>
+									捷克
+								
+							
+								<option value="204"> 贝宁 </option>
+									贝宁
+								
+							
+								<option value="208"> 丹麦 </option>
+									丹麦
+								
+							
+								<option value="212"> 多米尼克 </option>
+									多米尼克
+								
+							
+								<option value="214"> 多米尼加共和国 </option>
+									多米尼加共和国
+								
+							
+								<option value="218"> 厄瓜多尔 </option>
+									厄瓜多尔
+								
+							
+								<option value="222"> 萨尔瓦多 </option>
+									萨尔瓦多
+								
+							
+								<option value="226"> 赤道几内亚 </option>
+									赤道几内亚
+								
+							
+								<option value="231"> 埃塞俄比亚 </option>
+									埃塞俄比亚
+								
+							
+								<option value="232"> 厄立特里亚 </option>
+									厄立特里亚
+								
+							
+								<option value="233"> 爱沙尼亚 </option>
+									爱沙尼亚
+								
+							
+								<option value="234"> 法罗群岛 </option>
+									法罗群岛
+								
+							
+								<option value="238"> 马尔维纳斯群岛 </option>
+									马尔维纳斯群岛
+								
+							
+								<option value="239"> 南乔治亚岛和南桑德韦 </option>
+									南乔治亚岛和南桑德韦
+								
+							
+								<option value="242"> 斐济 </option>
+									斐济
+								
+							
+								<option value="246"> 芬兰 </option>
+									芬兰
+								
+							
+								<option value="250"> 法国 </option>
+									法国
+								
+							
+								<option value="254"> 法属圭亚那 </option>
+									法属圭亚那
+								
+							
+								<option value="258"> 法属波利尼西亚 </option>
+									法属波利尼西亚
+								
+							
+								<option value="260"> 法属南部领土 </option>
+									法属南部领土
+								
+							
+								<option value="262"> 吉布提 </option>
+									吉布提
+								
+							
+								<option value="266"> 加蓬 </option>
+									加蓬
+								
+							
+								<option value="268"> 格鲁吉亚 </option>
+									格鲁吉亚
+								
+							
+								<option value="270"> 冈比亚共和国 </option>
+									冈比亚共和国
+								
+							
+								<option value="276"> 德国 </option>
+									德国
+								
+							
+								<option value="288"> 加纳 </option>
+									加纳
+								
+							
+								<option value="292"> 直布罗陀 </option>
+									直布罗陀
+								
+							
+								<option value="296"> 基里巴斯 </option>
+									基里巴斯
+								
+							
+								<option value="300"> 希腊 </option>
+									希腊
+								
+							
+								<option value="304"> 格陵兰 </option>
+									格陵兰
+								
+							
+								<option value="308"> 格林纳达 </option>
+									格林纳达
+								
+							
+								<option value="312"> 瓜德罗普 </option>
+									瓜德罗普
+								
+							
+								<option value="316"> 关岛 </option>
+									关岛
+								
+							
+								<option value="320"> 危地马拉 </option>
+									危地马拉
+								
+							
+								<option value="324"> 几内亚 </option>
+									几内亚
+								
+							
+								<option value="328"> 圭亚那 </option>
+									圭亚那
+								
+							
+								<option value="332"> 海地 </option>
+									海地
+								
+							
+								<option value="334"> 赫德岛和麦克唐纳岛 </option>
+									赫德岛和麦克唐纳岛
+								
+							
+								<option value="336"> 梵蒂冈 </option>
+									梵蒂冈
+								
+							
+								<option value="340"> 洪都拉斯 </option>
+									洪都拉斯
+								
+							
+								<option value="344"> 中国香港 </option>
+									中国香港
+								
+							
+								<option value="348"> 匈牙利 </option>
+									匈牙利
+								
+							
+								<option value="352"> 冰岛 </option>
+									冰岛
+								
+							
+								<option value="356"> 印度 </option>
+									印度
+								
+							
+								<option value="360"> 印度尼西亚 </option>
+									印度尼西亚
+								
+							
+								<option value="364"> 伊朗 </option>
+									伊朗
+								
+							
+								<option value="368"> 伊拉克 </option>
+									伊拉克
+								
+							
+								<option value="372"> 爱尔兰 </option>
+									爱尔兰
+								
+							
+								<option value="374"> 巴勒斯坦 </option>
+									巴勒斯坦
+								
+							
+								<option value="376"> 以色列 </option>
+									以色列
+								
+							
+								<option value="380"> 意大利 </option>
+									意大利
+								
+							
+								<option value="384"> 科特迪瓦 </option>
+									科特迪瓦
+								
+							
+								<option value="388"> 牙买加 </option>
+									牙买加
+								
+							
+								<option value="392"> 日本 </option>
+									日本
+								
+							
+								<option value="398"> 哈萨克斯坦 </option>
+									哈萨克斯坦
+								
+							
+								<option value="400"> 约旦 </option>
+									约旦
+								
+							
+								<option value="404"> 肯尼亚 </option>
+									肯尼亚
+								
+							
+								<option value="408"> 朝鲜 </option>
+									朝鲜
+								
+							
+								<option value="410"> 韩国 </option>
+									韩国
+								
+							
+								<option value="414"> 科威特 </option>
+									科威特
+								
+							
+								<option value="417"> 吉尔吉斯斯坦 </option>
+									吉尔吉斯斯坦
+								
+							
+								<option value="418"> 老挝 </option>
+									老挝
+								
+							
+								<option value="422"> 黎巴嫩 </option>
+									黎巴嫩
+								
+							
+								<option value="426"> 莱索托 </option>
+									莱索托
+								
+							
+								<option value="428"> 拉脱维亚 </option>
+									拉脱维亚
+								
+							
+								<option value="430"> 利比里亚 </option>
+									利比里亚
+								
+							
+								<option value="434"> 利比亚 </option>
+									利比亚
+								
+							
+								<option value="438"> 列支敦士登 </option>
+									列支敦士登
+								
+							
+								<option value="440"> 立陶宛 </option>
+									立陶宛
+								
+							
+								<option value="442"> 卢森堡 </option>
+									卢森堡
+								
+							
+								<option value="446"> 中国澳门 </option>
+									中国澳门
+								
+							
+								<option value="450"> 马达加斯加 </option>
+									马达加斯加
+								
+							
+								<option value="454"> 马拉维 </option>
+									马拉维
+								
+							
+								<option value="458"> 马来西亚 </option>
+									马来西亚
+								
+							
+								<option value="462"> 马尔代夫 </option>
+									马尔代夫
+								
+							
+								<option value="466"> 马里 </option>
+									马里
+								
+							
+								<option value="470"> 马耳他 </option>
+									马耳他
+								
+							
+								<option value="474"> 马提尼克 </option>
+									马提尼克
+								
+							
+								<option value="478"> 毛里塔尼亚 </option>
+									毛里塔尼亚
+								
+							
+								<option value="480"> 毛里求斯 </option>
+									毛里求斯
+								
+							
+								<option value="484"> 墨西哥 </option>
+									墨西哥
+								
+							
+								<option value="492"> 摩纳哥 </option>
+									摩纳哥
+								
+							
+								<option value="496"> 蒙古 </option>
+									蒙古
+								
+							
+								<option value="498"> 摩尔多瓦 </option>
+									摩尔多瓦
+								
+							
+								<option value="500"> 蒙特塞拉特 </option>
+									蒙特塞拉特
+								
+							
+								<option value="504"> 摩洛哥 </option>
+									摩洛哥
+								
+							
+								<option value="508"> 莫桑比克 </option>
+									莫桑比克
+								
+							
+								<option value="512"> 阿曼 </option>
+									阿曼
+								
+							
+								<option value="516"> 纳米比亚 </option>
+									纳米比亚
+								
+							
+								<option value="520"> 瑙鲁 </option>
+									瑙鲁
+								
+							
+								<option value="524"> 尼泊尔 </option>
+									尼泊尔
+								
+							
+								<option value="528"> 荷兰 </option>
+									荷兰
+								
+							
+								<option value="530"> 荷属安的列斯 </option>
+									荷属安的列斯
+								
+							
+								<option value="533"> 阿鲁巴 </option>
+									阿鲁巴
+								
+							
+								<option value="540"> 新喀里多尼亚 </option>
+									新喀里多尼亚
+								
+							
+								<option value="548"> 瓦努阿图 </option>
+									瓦努阿图
+								
+							
+								<option value="554"> 新西兰 </option>
+									新西兰
+								
+							
+								<option value="558"> 尼加拉瓜 </option>
+									尼加拉瓜
+								
+							
+								<option value="562"> 尼日尔 </option>
+									尼日尔
+								
+							
+								<option value="566"> 尼日利亚 </option>
+									尼日利亚
+								
+							
+								<option value="570"> 纽埃 </option>
+									纽埃
+								
+							
+								<option value="574"> 诺福克岛 </option>
+									诺福克岛
+								
+							
+								<option value="578"> 挪威 </option>
+									挪威
+								
+							
+								<option value="580"> 北马里亚纳 </option>
+									北马里亚纳
+								
+							
+								<option value="581"> 美属太平洋各群岛 </option>
+									美属太平洋各群岛
+								
+							
+								<option value="583"> 密克罗尼西亚 </option>
+									密克罗尼西亚
+								
+							
+								<option value="584"> 马绍尔群岛 </option>
+									马绍尔群岛
+								
+							
+								<option value="585"> 贝劳 </option>
+									贝劳
+								
+							
+								<option value="586"> 巴基斯坦 </option>
+									巴基斯坦
+								
+							
+								<option value="591"> 巴拿马 </option>
+									巴拿马
+								
+							
+								<option value="598"> 巴布亚新几内亚 </option>
+									巴布亚新几内亚
+								
+							
+								<option value="600"> 巴拉圭 </option>
+									巴拉圭
+								
+							
+								<option value="604"> 秘鲁 </option>
+									秘鲁
+								
+							
+								<option value="608"> 菲律宾 </option>
+									菲律宾
+								
+							
+								<option value="612"> 皮特凯恩群岛 </option>
+									皮特凯恩群岛
+								
+							
+								<option value="616"> 波兰 </option>
+									波兰
+								
+							
+								<option value="620"> 葡萄牙 </option>
+									葡萄牙
+								
+							
+								<option value="624"> 几内亚比绍 </option>
+									几内亚比绍
+								
+							
+								<option value="626"> 东帝汶 </option>
+									东帝汶
+								
+							
+								<option value="630"> 波多黎各 </option>
+									波多黎各
+								
+							
+								<option value="634"> 卡塔尔 </option>
+									卡塔尔
+								
+							
+								<option value="638"> 留尼汪 </option>
+									留尼汪
+								
+							
+								<option value="642"> 罗马尼亚 </option>
+									罗马尼亚
+								
+							
+								<option value="643"> 俄罗斯 </option>
+									俄罗斯
+								
+							
+								<option value="646"> 卢旺达 </option>
+									卢旺达
+								
+							
+								<option value="654"> 圣赫勒拿 </option>
+									圣赫勒拿
+								
+							
+								<option value="659"> 圣基茨和尼维斯 </option>
+									圣基茨和尼维斯
+								
+							
+								<option value="660"> 安圭拉 </option>
+									安圭拉
+								
+							
+								<option value="662"> 圣卢西亚 </option>
+									圣卢西亚
+								
+							
+								<option value="666"> 圣皮埃尔和密克隆 </option>
+									圣皮埃尔和密克隆
+								
+							
+								<option value="670"> 圣文森特和格林纳丁斯 </option>
+									圣文森特和格林纳丁斯
+								
+							
+								<option value="674"> 圣马力诺 </option>
+									圣马力诺
+								
+							
+								<option value="678"> 圣多美和普林西比 </option>
+									圣多美和普林西比
+								
+							
+								<option value="682"> 沙特阿拉伯 </option>
+									沙特阿拉伯
+								
+							
+								<option value="686"> 塞内加尔 </option>
+									塞内加尔
+								
+							
+								<option value="690"> 塞舌尔 </option>
+									塞舌尔
+								
+							
+								<option value="694"> 塞拉利昂 </option>
+									塞拉利昂
+								
+							
+								<option value="702"> 新加坡 </option>
+									新加坡
+								
+							
+								<option value="703"> 斯洛伐克 </option>
+									斯洛伐克
+								
+							
+								<option value="704"> 越南 </option>
+									越南
+								
+							
+								<option value="705"> 斯洛文尼亚 </option>
+									斯洛文尼亚
+								
+							
+								<option value="706"> 索马里 </option>
+									索马里
+								
+							
+								<option value="710"> 南非 </option>
+									南非
+								
+							
+								<option value="716"> 津巴布韦 </option>
+									津巴布韦
+								
+							
+								<option value="724"> 西班牙 </option>
+									西班牙
+								
+							
+								<option value="732"> 西撒哈拉 </option>
+									西撒哈拉
+								
+							
+								<option value="736"> 苏丹 </option>
+									苏丹
+								
+							
+								<option value="740"> 苏里南 </option>
+									苏里南
+								
+							
+								<option value="744"> 斯瓦尔巴群岛 </option>
+									斯瓦尔巴群岛
+								
+							
+								<option value="748"> 斯威士兰 </option>
+									斯威士兰
+								
+							
+								<option value="752"> 瑞典 </option>
+									瑞典
+								
+							
+								<option value="756"> 瑞士 </option>
+									瑞士
+								
+							
+								<option value="760"> 叙利亚 </option>
+									叙利亚
+								
+							
+								<option value="762"> 塔吉克斯坦 </option>
+									塔吉克斯坦
+								
+							
+								<option value="764"> 泰国 </option>
+									泰国
+								
+							
+								<option value="768"> 多哥 </option>
+									多哥
+								
+							
+								<option value="772"> 托克劳 </option>
+									托克劳
+								
+							
+								<option value="776"> 汤加 </option>
+									汤加
+								
+							
+								<option value="780"> 特立尼达和多巴哥 </option>
+									特立尼达和多巴哥
+								
+							
+								<option value="784"> 阿联酋 </option>
+									阿联酋
+								
+							
+								<option value="788"> 突尼斯 </option>
+									突尼斯
+								
+							
+								<option value="792"> 土耳其 </option>
+									土耳其
+								
+							
+								<option value="795"> 土库曼斯坦 </option>
+									土库曼斯坦
+								
+							
+								<option value="796"> 特克斯和凯科斯群岛 </option>
+									特克斯和凯科斯群岛
+								
+							
+								<option value="798"> 图瓦卢 </option>
+									图瓦卢
+								
+							
+								<option value="800"> 乌干达 </option>
+									乌干达
+								
+							
+								<option value="804"> 乌克兰 </option>
+									乌克兰
+								
+							
+								<option value="807"> 马其顿 </option>
+									马其顿
+								
+							
+								<option value="818"> 埃及 </option>
+									埃及
+								
+							
+								<option value="826"> 英国 </option>
+									英国
+								
+							
+								<option value="834"> 坦桑尼亚 </option>
+									坦桑尼亚
+								
+							
+								<option value="840"> 美国 </option>
+									美国
+								
+							
+								<option value="850"> 美属维尔京群岛 </option>
+									美属维尔京群岛
+								
+							
+								<option value="854"> 布基纳法索 </option>
+									布基纳法索
+								
+							
+								<option value="858"> 乌拉圭 </option>
+									乌拉圭
+								
+							
+								<option value="860"> 乌兹别克斯坦 </option>
+									乌兹别克斯坦
+								
+							
+								<option value="862"> 委内瑞拉 </option>
+									委内瑞拉
+								
+							
+								<option value="876"> 瓦利斯和富图纳群岛 </option>
+									瓦利斯和富图纳群岛
+								
+							
+								<option value="882"> 西萨摩亚 </option>
+									西萨摩亚
+								
+							
+								<option value="887"> 也门 </option>
+									也门
+								
+							
+								<option value="891"> 南斯拉夫 </option>
+									南斯拉夫
+								
+							
+								<option value="894"> 赞比亚 </option>
+									赞比亚
+								
+							
+				     	</select>
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="该资产产地国家">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="content-td" colspan="2">&nbsp;</td>
+					</tr>
+					<tr>
+						<td colspan="4" style="height: 35px;background: #DBDBDB;">
+							<strong>其他补充信息</strong>&nbsp;&nbsp;<span style="cursor: pointer;" onclick="groupTelescopic(this, &#39;OTHER&#39;);"
+							 type="shrink"><img src="./subTqbAdd_files/shrink.png"></span>
+						</td>
+					</tr>
+
+					<tr groupcode="OTHER">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							生产厂家
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="SCCJ" style="float:left;" type="text" name="SCCJ" value="" class="form-control  " validation="name[生产厂家],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请填写该资产使用说明书中的生产厂家全称">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							备注
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="BZ" style="float:left;" type="text" name="BZ" value="" class="form-control  ">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="OTHER">
+
+
+
+
+
+
+
+
+
+
+
+
+					</tr>
+					<tr>
+						<td colspan="4" style="height: 35px;background: #DBDBDB;">
+							<strong>填写人信息</strong>&nbsp;&nbsp;<span style="cursor: pointer;" onclick="groupTelescopic(this, &#39;creater&#39;);"
+							 type="shrink"><img src="./subTqbAdd_files/shrink.png"></span>
+						</td>
+					</tr>
+
+					<tr groupcode="creater">
+
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							填写人姓名
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="TXR" style="float:left;" type="text" name="TXR" value="" class="form-control  "  validation="name[填写人姓名],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							填写人工号
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="TXRGH" style="float:left;" type="text" name="TXRGH" value="" class="form-control  " 
+							 validation="name[填写人工号],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="creater">
+
+
+
+
+
+						<td class="listr2 title-td">
+							联系电话
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="LXDH" style="float:left;" type="text" name="LXDH" value="" class="form-control  " validation="name[联系电话],empty">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="该报账单填写人的联系电话">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="listr2 title-td">
+							邮箱地址
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="YXDZ" style="float:left;" type="text" name="YXDZ" value="" class="form-control  ">
+
+
+
+
+
+
+							<img style="display:block;margin-top:7px;margin-left:88%;" src="./subTqbAdd_files/img_questionMark.jpg" onmouseover="mouseover(this);"
+							 onmouseout="mouseout(this);" name="请填写保管人的邮箱地址">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+					</tr>
+					<tr groupcode="creater">
+
+
+
+
+
+
+
+
+
+						<td class="listr2 title-td">
+							填写日期
+
+							<b class="star">*</b>
+
+						</td>
+						<td class="content-td">
+
+
+
+
+
+
+
+
+							<input id="TXRQ" style="float:left;" type="text" name="TXRQ" value="" class="form-control  " 
+							 validation="name[填写日期],empty">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</td>
+						<td class="content-td" colspan="2">&nbsp;</td>
+					</tr>
+					<tr id="trFile" style="display: none;">
+						<td class="listr2">
+							<span id="tdName">附件</span><b class="star">*</b>
+						</td>
+						<td>
+
+
+							<input type="file" name="file" id="file">
+
+
+
+						</td>
+					</tr>
+
+
+				</tbody>
+			</table>
+
+			<div class="btn-div" style="width: 100%;text-align: center;padding-top: 5px;">
+
+				<button id="btnSubmit" class="btn  btn-success" style="width: 100px" type="button" onclick="subForm(&#39;1&#39;)">暂 存</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+
+				<button type="button" class="btn  btn-success" style="width: 100px" onclick="$(&#39;#flag&#39;).val(&#39;yes&#39;);sub(&#39;/private/tqb/manage/integrated/process/saveStart.action&#39;);">提交申请</button>&nbsp;&nbsp;&nbsp;&nbsp;
+
+				<button type="button" style="width: 100px" class="btn  btn-success" onclick="">返回</button>
+			</div>
+			<div id="goto-top" title="返回顶部" style="display: none;">
+				<img src="./subTqbAdd_files/top.png">
+			</div>
+			<br><br>
+		</form>
+	</div>
+
+
+
+	<div id="datepick-div" style="display: none;"></div>
+</body>
+
+</html>

@@ -1,0 +1,179 @@
+$(function(){
+	  bindTabEvent();  
+	  bindTabMenuEvent();  
+	  $center = $('#pf-page');
+	});
+	var $center ;
+			
+	function addIframe(title, value,newTab){
+		addTab(title,value,"1",newTab);
+	}
+	function addPage(title, value){
+		addTab(title,value,"2",newTab);
+	}
+	function addContent(title, value){
+		addTab(title,value,"3",newTab);
+	}
+			
+	function addTab(title, value,loadType,newTab){
+    if (newTab&&$center.tabs('exists', title)){
+        $center.tabs('select', title);
+        var currTab =  $center.tabs('getSelected');
+		var options = currTab.panel('options');
+			 $center.tabs('update',{
+				tab:currTab,
+				options:options
+			})
+    } else {
+        var option = {
+            title:title,
+            cache:false,
+            selected:true,
+            closable:true
+            }
+         loadType=typeof(loadType)=="undefined"||$.trim(loadType)==""?"1":loadType;
+         if(loadType=="1"){
+         	option.content = createFrame(value);
+         }else if(loadType=="2"){
+         	option.href = value;
+         }else if(loadType=="3"){
+         	option.content = value;
+         }else{
+         	//addTab(title, value,"1");
+        	 window.open(value);
+         	return false;
+         }
+         option.loadType = loadType;
+         $center.tabs('add',option);
+        //$('#mm-tabupdate').click();
+    }
+}
+function closeTab(title){
+	//alert($('#center').tabs('select', title).html());
+	 $center.tabs('close', title);
+}
+function getTabTitle(){
+	return  $center.find('.tabs-selected .tabs-title').text();
+}
+function closeTabThis(title){
+	if(title){
+		$center.tabs('close', title);
+	}else{
+		 $center.find('.tabs-selected .tabs-close').click();
+	}
+	
+}
+
+function createFrame(url)
+{
+	var s = '<iframe scrolling="auto" frameborder="0" src="'+url+'" style="width:100%;" onload="changeFrameHeight(this)"></iframe>';
+	return s;
+}
+	
+function changeFrameHeight(obj){
+    //var ifm = document.getElementById("iframepage"); 
+    obj.height=document.documentElement.clientHeight-170;
+}
+window.onresize=function(){  
+     //changeFrameHeight();  
+} 
+	
+//绑定tab的双击事件、右键事件  
+function bindTabEvent(){  
+    $(".tabs-inner").live('dblclick',function(){  
+        var subtitle = $(this).children("span").text();  
+        if($(this).next().is('.tabs-close')){  
+             $center.tabs('close',subtitle);  
+        }  
+    });  
+    $(".tabs-inner").live('contextmenu',function(e){  
+        $('#mm').menu('show', {  
+            left: e.pageX,  
+            top: e.pageY  
+     });  
+     var subtitle =$(this).children("span").text();  
+     $('#mm').data("currtab",subtitle);  
+     return false;  
+    });  
+    
+ }  
+ 
+  
+
+
+
+//绑定tab右键菜单事件  
+function bindTabMenuEvent() {  
+	//刷新
+	$('#mm-tabupdate').click(function(){
+		var currTab =  $center.tabs('getSelected');
+		var options = currTab.panel('options');
+		if(options.loadType=="2"){
+			$(".tabs-selected").click();
+		}else if(options.loadType=="1"){
+			 $center.tabs('update',{
+				tab:currTab,
+				options:options
+			})
+		}else{
+			alert("此页面不能刷新！");
+		}
+	});
+    //关闭当前  
+    $('#mm-tabclose').click(function() {  
+        var currtab_title = $('#mm').data("currtab");  
+      //  if ($(this).next().is('.tabs-close')) {  
+             $center.tabs('close', currtab_title);  
+      //  }  
+    });  
+    //全部关闭  
+    $('#mm-tabcloseall').click(function() {  
+        $('.tabs-inner span').each(function(i, n) { 
+            if ($(this).parent().next().is('.tabs-close')) {  
+                var t = $(n).text();  
+                 $center.tabs('close', t);  
+            }  
+        });  
+    });  
+    //关闭除当前之外的TAB  
+    $('#mm-tabcloseother').click(function() {  
+        var currtab_title = $('#mm').data("currtab");  
+        $('.tabs-inner span').each(function(i, n) {  
+            if ($(this).parent().next().is('.tabs-close')) {  
+                var t = $(n).text();  
+                if (t != currtab_title)  
+                     $center.tabs('close', t);  
+            }  
+        });  
+    });  
+    //关闭当前右侧的TAB  
+    $('#mm-tabcloseright').click(function() {  
+        var nextall = $('.tabs-selected').nextAll();  
+        if (nextall.length == 0) {  
+            alert('已经是最后一个了');  
+            return false;  
+        }  
+        nextall.each(function(i, n) {  
+            if ($('a.tabs-close', $(n)).length > 0) {  
+                var t = $('a:eq(0) span', $(n)).text();  
+                 $center.tabs('close', t);  
+            }  
+        });  
+        return false;  
+    });  
+    //关闭当前左侧的TAB  
+    $('#mm-tabcloseleft').click(function() {  
+        var prevall = $('.tabs-selected').prevAll();  
+        if (prevall.length == 0) {  
+            alert('已经是第一个了');  
+            return false;  
+        }  
+        prevall.each(function(i, n) {  
+            if ($('a.tabs-close', $(n)).length > 0) {  
+                var t = $('a:eq(0) span', $(n)).text();  
+                 $center.tabs('close', t);  
+            }  
+        });  
+        return false;  
+    });  
+}  

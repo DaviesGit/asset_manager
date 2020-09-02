@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<!-- saved from url=(0051)http://zcgl.uestc.edu.cn/private/front/index.action -->
+<html lang="en">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>成都市经济与信息化委员会资产管理系统</title>
+
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="robots" content="index,follow">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="shortcut icon" href="javascript:void(0)" type="image/x-icon">
+	<link rel="stylesheet" href="./main_page_files/reset.css">
+	<link rel="stylesheet" href="./main_page_files/style.css">
+	<link rel="stylesheet" type="text/css" href="./main_page_files/layui.css">
+	<link rel="stylesheet" type="text/css" href="./main_page_files/layer.css">
+	<script type="text/javascript" src="./main_page_files/jquery.js.download"></script>
+	<script type="text/javascript" src="./main.js"></script>
+	<!-- <script type="text/javascript" src="./main_page_files/layer.js.download"></script> -->
+	<link rel="stylesheet" href="./main_page_files/layer(1).css" id="layuicss-skinlayercss">
+	<!-- <script type="text/javascript" src="./main_page_files/layui.js.download"></script> -->
+
+
+	<style type="text/css">
+		a:hover {
+			color: #4d97dc;
+		}
+	</style>
+	<link id="layuicss-layer" rel="stylesheet" href="./main_page_files/layer(2).css" media="all">
+</head>
+
+<body>
+
+
+	<div class="content">
+		<div class="container">
+			<div class="nav">
+				<div class="head-top"><img src="../asset/logo.png" alt="" onclick="userInfo()">
+					<span style="width:2%;display: inline-block"></span>资产管理系统</div>
+			</div>
+			<div class="header clearfix">
+				<div class="head-lf">
+					<a onclick="userInfo()" style="cursor:pointer;color:rgba(0,150,217,1.00); font-weight: bold">管理员，您好</a>
+					<a href="javascript:void(0)">办事大厅</a>
+					<a href="javascript:;" onclick="more(2);">常用下载</a>
+					<a href="javascript:void(0)" target="_blank" onclick="">国资网站</a>
+				</div>
+				<div class="head-lr">
+
+
+
+
+					<ul class="clearfix">
+						<li>
+							<a href="javascript:void(0)" title=""><img style="width: 24px;height: 25px" src="./main_page_files/back.png" alt=""><p>后台管理</p></a>
+						</li>
+						<li>
+							<a href="javascript:void(0)" title=""><img src="./main_page_files/xtxx.png" style="width: 25px;height: 25px" alt="" onclick="showNews()"><p onclick="showNews()">系统消息</p></a>
+						</li>
+						<li>
+							<a href="../login/login.html" title=""><img src="./main_page_files/tc.png" alt=""><p>退出系统</p></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="main clearfix">
+				<div class="main-lf">
+					<ul class="clearfix">
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/sbf.png" alt="" onclick="">
+                                <p>设备</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/jj.png" alt="" onclick="">
+                                <p>家具</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/rj.png" alt="" onclick="">
+                                <p>软件</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/da.png" alt="" onclick="">
+                                <p>档案</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/ts.png" alt="" onclick="">
+                                <p>图书</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/dzw.png" alt="" onclick="">
+                                <p>动植物</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;">
+                                <img src="./main_page_files/zl (2).png" alt="" onclick="">
+                                <p>专利</p>
+                            </a>
+						</li>
+						<li>
+							<a href="javascript:;"  style="position:relative; display:block; overflow:hidden;">
+								<input type="file" onchange="alert('导入成功！');" id="upload_file" name="upload_file" style="position: absolute;top: 0;right: 0;margin: 0;padding: 0;font-size: 100px;cursor: pointer;opacity: 0;filter: alpha(opacity=0);"/>
+								<img src="./main_page_files/dz.png" alt="" >
+                                <p>表格导入</p>
+                            </a>
+						</li>
+					</ul>
+				</div>
+				<div class="main-md" style="">
+					<div class="main-md-t">热门服务</div>
+					<div id="rmfwDivi">
+
+
+						<ul class="clearfix">
+							<li>
+								<a href="javascript:void(0)">
+                                <img src="./main_page_files/list1.png" alt="" onclick="location.href='../all_devices/all_devices.html';">
+                                <p>所有设备</p>
+                            </a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+                                <img src="./main_page_files/sbys.png" alt=""  onclick="location.href='../device_manager/device_manager.html';">
+                                <p>设备管理</p>
+                            </a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+                                <img src="./main_page_files/raw_1512910095.png" alt=""  onclick="location.href='../all_devices/all_devices.html';">
+                                <p>设备建账</p>
+                            </a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+                                <img src="./main_page_files/bf1.png" alt=""  onclick="location.href='../all_devices/all_devices.html';">
+                                <p>设备报废</p>
+                            </a>
+							</li>
+
+
+							<li>
+								<a href="javascript:void(0)">
+                                <img src="./main_page_files/raw_1512907121.png" alt=""  onclick="location.href='../all_devices/all_devices.html';">
+                                <p>对外捐赠</p>
+                            </a>
+							</li>
+							<li>
+								<a href="javascript:void(0)">
+                                <img src="./main_page_files/raw_1512907628.png" alt=""  onclick="location.href='../all_devices/all_devices.html';">
+                                <p>设备调拨</p>
+                            </a>
+							</li>
+							<li>
+								<a href="javascript:void(0)"> <img src="./main_page_files/zccx.png" alt=""  onclick="location.href='../all_devices/all_devices.html';">
+								<p>
+									设备清查
+								</p> </a>
+							</li>
+							<li>
+								<a href="javascript:void(0)"> <img src="./main_page_files/zcdb.png" alt=""  onclick="location.href='../all_devices/all_devices.html';">
+								<p>
+									设备调剂
+								</p> </a>
+							</li>
+						</ul>
+
+					</div>
+				</div>
+				<div class="main-lr">
+					<div class="main-lr-top clearfix">
+						<div class="rt">通知公告</div>
+
+
+						<div>
+							<ul>
+
+								<li style="white-space:nowrap;word-break:keep-all;overflow:hidden;ext-overflow:ellipsis;width:1;"><a href="" javascript:void(0) ";" onclick="view(&#39;/private/notify/notifyGg/view.action?id=5e4537d6638bdd5501638c2fac700023&#39;);">  报废流程图解</a></li>
+
+								<li style="white-space:nowrap;word-break:keep-all;overflow:hidden;ext-overflow:ellipsis;width:1;"><a href="" javascript:void(0) ";" onclick="view(&#39;/private/notify/notifyGg/view.action?id=5e4537d6620a927b01621524e564002a&#39;);">  关于调整资产建账标准的通...</a></li>
+
+								<li style="white-space:nowrap;word-break:keep-all;overflow:hidden;ext-overflow:ellipsis;width:1;"><a href="" javascript:void(0) ";" onclick="view(&#39;/private/notify/notifyGg/view.action?id=5e4537d66218da5801621d076966005d&#39;);">  教育部关于规范和加强直属...</a></li>
+
+							</ul>
+						</div>
+						<div align="right" style="padding-top: 10px;">
+
+							<a href="" javascript:void(0) ";" style="color:  #000;width:100%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; display:block;"
+							 onclick="more(1);">查看更多&gt;&gt;</a>
+
+						</div>
+					</div>
+					<div class="main-lr-bot">
+						<div class="rt">待办</div>
+						<div class="lr-bot-fw">
+							<a class="clearfix" href="javascript::">
+                              <span id="dblist">0</span>
+                                <img src="./main_page_files/raw_1512910095.png" alt="" onclick="more(0);">
+                                <p>事项处理</p>
+                            </a>
+						</div>
+						<div class="lr-bot-fw" id="bfDiv" style="display: none;">
+							<a class="clearfix" href="javascript::">
+                             <span id="bflist">0</span>
+                                <img src="./main_page_files/bflb.png" alt="" onclick="more(3);">
+                                <p>报废处理</p>
+                            </a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="foot">
+		<ul>
+			<li>
+				©2017-2018 <a href="javascript:void(0)" style="color: rgba(0,150,217,1.00)" target="_blank">成都市经济与信息化委员会</a>&nbsp;用户咨询QQ群：***********
+			</li>
+			<ul>
+				<li>
+					设备验收、调剂、清查 请咨询QQ群：*********
+				</li>
+			</ul>
+		</ul>
+	</div>
+
+	<div style="display: none;" id="dbDIv">
+
+
+	</div>
+
+	<div id="tjDiv" style="display: none;">
+		<div style="margin-top: 10px" align="center">
+
+			<form class="layui-form" action="javascript:void(0)">
+				<input name="sq" value="javascript:void(0)" title="闲置申请" checked="" type="radio">
+				<div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><span>闲置申请</span></div> <input name="sq" value="javascript:void(0)" title="闲置领用申请"
+				 type="radio">
+				<div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>闲置领用申请</span></div>
+			</form>
+		</div>
+	</div>
+	<div id="sxDiv" style="display: none;">
+		<div style="margin-top: 10px" align="center">
+
+			<form class="layui-form" action="javascript:void(0)">
+				<input name="sex" value="card_animalandplant" title="动植物" checked="" type="radio">
+				<div class="layui-unselect layui-form-radio layui-form-radioed"><i class="layui-anim layui-icon"></i><span>动植物</span></div>
+				<input name="sex" value="card_archive" title="档案" type="radio">
+				<div class="layui-unselect layui-form-radio"><i class="layui-anim layui-icon"></i><span>档案</span></div>
+			</form>
+		</div>
+	</div>
+	<!-- <script type="text/javascript">
+		$(function () {
+			var array = new Array();
+			var sum = 0;
+
+
+			$('#bflist').text(sum);
+
+
+			var dblist = 0;
+
+			$('#dblist').text(dblist);
+			if (sum == 0) {
+				$("#bfDiv").hide();
+			}
+		});
+
+
+
+
+		function openCard(type) {
+			$.ajax({
+				cache: true,
+				type: "POST",
+				url: '/private/front/getDiv.action',
+				data: { type: type },// 你的formid
+				async: false,
+				success: function (data) {
+					$("#rmfwDivi").html(data);
+				}
+			});
+		}
+
+		function skipUrl(url) {
+			window.location.href = url;
+		}
+
+
+		function more(obj) {
+			if (obj == 0) {
+				var url = '/private/front/morelist.action';
+				layer.open({ content: url, type: 2, title: '待办事项列表', maxmin: true, shadeClose: false, area: [screen.width * 0.85 + 'px', screen.height * 0.75 + 'px'] });
+			} else if (obj == 1) {
+				var url = '/private/notify/notifyGg/morelist.action';
+				layer.open({ content: url, type: 2, title: '通知公告列表', maxmin: true, shadeClose: false, area: [screen.width * 0.8 + 'px', screen.height * 0.7 + 'px'] });
+			} else if (obj == 2) {
+				var url = '/private/downLoad/commonDownLoads/morelist.action';
+				layer.open({ content: url, type: 2, title: '常用下载列表', maxmin: true, shadeClose: false, area: [screen.width * 0.8 + 'px', screen.height * 0.7 + 'px'] });
+			} else if (obj == 3) {
+				layer.open({
+					type: 1,
+					skin: 'layui-layer-rim', //加上边框
+					area: ['750px', '350px'], //宽高
+					content: $("#dbDIv"),
+					btn: ['关闭'],
+					btn2: function (index) {
+						layer.close(index);
+					}
+				});
+			}
+		}
+
+		function userInfo() {
+			layer.open({ content: '/private/user/form.action', type: 2, title: '个人信息', maxmin: true, shadeClose: true, area: [screen.width * 0.40 + 'px', screen.height * 0.40 + 'px'] });
+		}
+
+
+		function showNews() {
+			window.location.href = "/private/notify/list.action?temp=system";
+		}
+
+
+		//招标采购系统
+		function openTender() {
+			window.open('http://cg.uestc.edu.cn/a');
+		}
+
+		//报账
+		function openIntegratedTqb() {
+			window.location.href = "/private/tqb/manage/integrated/subTqbAdd.action?temp=system";
+		}
+
+		//附件变更主机
+		function fjChangeHost() {
+			window.location.href = "/private/card/changeApply/front/fjChangeHostForm.action";
+		}
+
+		//设备清查
+		function qcChange() {
+			window.open("javascript:void(0)");
+		}
+		//设备验收
+		function ysChange() {
+			window.open("javascript:void(0)");
+		}
+		//设备调剂
+		function tjChange() {
+			layer.open({
+				type: 1,
+				skin: 'layui-layer-rim', //加上边框
+				area: ['420px', '240px'], //宽高
+				content: $("#tjDiv"),
+				btn: ['确定', '关闭'],
+				btn1: function (index) {
+					var type = $("input[name='sq']:checked").val();
+					window.open(type);
+					layer.close(index);
+				},
+				btn2: function (index) {
+					layer.close(index);
+				}
+			});
+		}
+
+
+		function view(url) {
+			window.parent.layer.open({ content: url, type: 2, title: '通知公告详情', maxmin: true, shadeClose: false, area: [screen.width * 0.8 + 'px', screen.height * 0.7 + 'px'] });
+		}
+
+
+		function sxChange() {
+
+			layer.open({
+				type: 1,
+				skin: 'layui-layer-rim', //加上边框
+				area: ['420px', '240px'], //宽高
+				content: $("#sxDiv"),
+				btn: ['确定', '关闭'],
+				btn1: function (index) {
+					var type = $("input[name='sex']:checked").val();
+					window.location.href = "/private/card/changeApply/front/property/form.action?tableName=" + type;
+					layer.close(index);
+				},
+				btn2: function (index) {
+					layer.close(index);
+				}
+			});
+
+		}
+	</script> -->
+	<!-- 
+	<script>
+			layui.use(['form'], function () {
+				var form = layui.form;
+				form.render();
+			})
+	</script> -->
+
+	<div class="layui-layer-move"></div>
+</body>
+
+</html>

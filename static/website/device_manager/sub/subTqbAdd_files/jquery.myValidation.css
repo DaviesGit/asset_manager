@@ -1,0 +1,36 @@
+.validation-tip{ 
+	display: none;
+    height: auto;
+    position: absolute;
+    width: 200px;
+    z-index: 1;
+    cursor: pointer;
+    }
+    
+   .validation-tip-content {
+    background: none repeat scroll 0 0 #FFFFCC;
+    border: 1px solid #CC9933;
+    display: inline-block;
+    font-size: 12px;
+    left: 10px;
+    padding: 3px 5px;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+}
+
+.validation-tip-pointer {
+    background: url("validation_pointer.gif") no-repeat scroll left top transparent;
+    display: inline-block;
+    height: 19px;
+    left: 1px;
+    position: absolute;
+    top: 0;
+    width: 10px;
+    z-index: 9900002;
+}
+
+				
+				.validation_error{
+					 border: 2px red dashed;
+					}

@@ -1,0 +1,7 @@
+{
+    "command": "get_device",
+    "data": {
+        "device_id": "3452354"
+    }
+}
+

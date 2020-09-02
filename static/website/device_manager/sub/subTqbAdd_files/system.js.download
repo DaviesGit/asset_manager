@@ -1,0 +1,513 @@
+var defaultFormId = "ec";
+$(function(){
+	_systemUI.bindInputClass($("input[type=text]"));
+});
+_systemUI = {
+	deleteData : function(o,url,option){
+		_systemUI.confirm('您确定要删除吗？',function(){
+			$.post(url,option,function(s){
+				if(s.code==200){
+					_systemUI.alert("删除成功！");
+					$(o).parents("tr").remove();
+				}else{
+					_systemUI.alert("删除失败！");
+				}
+			})
+		});
+	},
+	bindInputClass:function(o){
+	     o.bind('focus', function() {
+	     			if(this.tagName=='TEXTAREA')
+	     				$(this).addClass('TextArea2');
+	     			else if(this.tagName=='INPUT'){
+			  			$(this).addClass('InputText2');
+			  			}
+			  }).bind('blur', function() {
+			  		if(this.tagName=='TEXTAREA')
+	     				$(this).removeClass('TextArea2');
+	     			else if(this.tagName=='INPUT')
+			  			$(this).removeClass('InputText2');
+			  });
+     },
+     bindInputBlur : function(o){
+     	o.bind('blur',function(){
+			$(this).validation();
+		});
+     },
+     checkedAll : function(o){
+    	 if($(o).attr('checked')){
+    		 _commonUI.getForm(o).find("input[type=checkbox]").attr('checked','checked');
+    	 }else{
+    		 _commonUI.getForm(o).find("input[type=checkbox]").removeAttr('checked');
+    		 
+    	 }
+     	//_commonUI.getForm(o).find("input[type=checkbox]").attr('checked',$(o).attr('checked')?"checked":"");
+     },
+     ajaxPost:function(form,settings,callback){
+    	 if(typeof(settings)=="function"){
+    		 callback = settings;
+    		 settings = {};
+    	 }
+ 		form=_commonUI.getForm(form);
+ 		if(!settings) settings={};
+ 		var url;
+ 		if(form.checkForm()){
+ 			if(!_commonUI.hasObject(settings.url)||settings.url==''){
+ 				url=form.attr("action");
+ 			}else{
+ 				url = settings.url;
+ 			}
+ 			var options = { 
+ 				url : url,
+ 			    success: function(result) {
+ 			    	if(settings.callBack){
+ 			    		settings.callBack(result);
+ 			    		return false;
+ 			    	}
+ 			    	try{
+ 			    		if(typeof(result)=="string"){
+ 			    			if(result.indexOf("<pre>")>-1){
+ 			    				result=result.replaceAll("<pre>", "");
+ 			    				result=result.replaceAll("</pre>", "");
+ 			    			}
+		    				result = $.parseJSON(result);
+ 			    		}
+ 			    	}catch(e){}
+ 			    	
+ 			    		if(callback){
+ 			    			if(settings.ajaxCallBack){
+ 			    				_systemUI.ajaxCallBack(result,callback);
+ 			    			}else{
+ 			    				callback(result);
+ 			    			}
+ 			    		}else{
+ 			    			_systemUI.ajaxCallBack(result);
+ 			    		}
+ 			    		if(settings.close){
+ 			    			mycloseDOMWindow();
+ 			    		}
+ 				  },
+ 				error: function(result,status){
+ 				  	_systemUI.ajaxCallBack(result);
+ 				}
+ 			 };    
+ 		   form.ajaxSubmit(options); 
+ 		 }
+ 		   return false;
+ 	},
+ 	ajaxGet : function(url,settings,callback){
+ 		 if(typeof(settings)=="function"){
+    		 callback = settings;
+    		 settings = {};
+    	 }
+ 		if(!settings) settings={};
+ 		$.get(url,function(result){
+ 			try{
+	    		if(typeof(result)=="string"){
+	    			if(result.indexOf("<pre>")>-1){
+	    				result=result.replaceAll("<pre>", "");
+	    				result=result.replaceAll("</pre>", "");
+	    			}
+				result = $.parseJSON(result);
+	    		}
+	    	}catch(e){}
+ 			if(!callback){
+	    		_systemUI.ajaxCallBack(result);
+    		}else{
+    			if(settings.ajaxCallBack){
+    				_systemUI.ajaxCallBack(result,callback);
+    			}else{
+    				callback(result);
+    			}
+    		}
+    		if(settings.close){
+    			mycloseDOMWindow();
+    		}
+ 		});
+ 	},
+     ajaxCallBack : function(result,callback){//result = $.parseJSON(result);
+    	 try{
+    		if(typeof(result)=="string"){
+    			if(result.indexOf("<pre>")>-1){
+    				result=result.replaceAll("<pre>", "");
+    				result=result.replaceAll("</pre>", "");
+    			}
+			result = $.parseJSON(result);
+    		}
+	    	}catch(e){}
+    	 var code = "";
+		if(_commonUI.hasObject(result.code)){
+			code = result.code;
+	    	if(code==200){
+  				alert((result.message!=''&&result.message!=null)?result.message:"操作成功!");
+  				if(callback){
+  					callback(result);
+  				}
+	    	}else if(code==500){
+			    alert((result.message!=''&&result.message!=null)?result.message:"操作失败!");
+	    	}else if(code==404){
+			    alert((result.message!=''&&result.message!=null)?result.message:"没有相关数据!");
+	    	}
+   		 }else{
+   		 }
+		return code;
+	},
+	sortCheckbox : function(table){
+		var $o =  $(table);
+		var flag=true;
+		if($o.attr("sortCheck")==null){
+			$o.attr("sortCheck","true");
+		}
+		flag = $o.attr("sortCheck")=="true";
+		
+		if(!(table instanceof jQuery)){
+			if(typeof(table)=="object"){
+				if(table.tagName=="TABLE")
+					var table=$(table);
+				else
+					var table=$(table).parents('table');
+			}else{
+				var table=$('#'+table);
+			}
+		}
+		var $trFirst =  table.find("tr").first();
+		var $trs = $trFirst.siblings().filter('tr');
+		var $tr;
+		var $preTr;
+		$trs.find("input[type=checkbox]:checked").each(function(i){
+			$tr = $(this).parent().parent();
+			if(i==0){
+				if(flag){
+					$trFirst.after($tr);
+				}else{
+					table.append($tr);
+				}
+				$preTr = $tr;
+			}else{
+				$preTr.after($tr);
+				$preTr = $tr;
+			}
+		});
+		table.find("tr").first().siblings().filter('tr').removeClass("listr1").removeClass("listr2").each(function(i){
+				 $(this).addClass("listr"+(i%2+1));
+		});
+		$o.attr("sortCheck",!flag+"");
+		$($o).blur();
+	},
+	
+	sortTable : function(table){
+		if(table&&table.type&&table.type=="click"){
+			table=this;
+		}
+		var $o =  $(table);
+		
+		if($o.find("input[type=checkbox]").length>0){
+			return;
+		}
+		var th_text=$o.html();
+		$($o.parent().find("th")).each(function(i){
+			$(this).html($(this).html().replace(/↑|↓/g,""));
+		});
+		
+		
+		var sortTip="";
+		var sortColor="red";
+		//<font color='red' id="sortTip" style="font-weight: bold;"></font>
+		if($o.find('#sortTip').length==0){
+			$o.html($o.html()+"<font color='red' id='sortTip' style='font-weight: bold;'></font>");
+		}
+		if(th_text.indexOf("↑")!=-1){
+			sortTip = "↓";
+			sortColor = "green";
+		}else if(th_text.indexOf("↓")!=-1){
+			sortTip = "↑";
+			sortColor = "red";
+		}else{
+			sortTip = "↑";
+			sortColor = "red";
+		}
+		
+		$o.find('#sortTip').attr("color",sortColor).text(sortTip);
+		var flag=true;
+		if($o.attr("sort")==null){
+			$o.attr("sort","true");
+		}
+		flag = $o.attr("sort")=="true";
+		if(!(table instanceof jQuery)){
+			if(typeof(table)=="object"){
+				if(table.tagName=="TABLE")
+					var table=$(table);
+				else
+					var table=$(table).parents('table').first();
+			}else{
+				var table=$('#'+table);
+			}
+		}
+		
+		var $trFirst =  table.find("tr").first();
+		
+		var index=jQuery.inArray($o.get(0),jQuery.makeArray(table.find('.tableHeader')));
+		
+		//var $trs = $trFirst.siblings().filter('tr');
+		var $trs = table.find(".tableBody tr");
+		var $tr;
+		var $preTr;
+		var trs = new Array();
+		
+		$trs.each(function(i){
+			trs[i]=$(this);
+			$(this).remove();
+		});
+		
+		var sortNumber = function(a,b){
+			var a1=$.trim(a.find("td:eq("+index+")").text());
+			var b1=$.trim(b.find("td:eq("+index+")").text());
+			
+			if(a1==b1){
+				return 0;
+			}else if(a1==''&&b1!=''){
+				return 1;
+			}else if(a1!=''&&b1==''){
+				return -1;
+			}else if(a1>b1){
+				return flag?1:-1;
+			}else{
+				return flag?-1:1;
+			}
+		}
+		trs.sort(sortNumber);
+		//alert($(trs).length);
+		var tableBody = table.find(".tableBody");
+		$(trs).each(function(i){
+			var $tr = $(this).removeClass("odd").removeClass("even");
+			if(i%2==0){
+				 $tr.addClass("odd");
+			}else{	
+				 $tr.addClass("even");
+			}
+			
+			tableBody.append($tr);
+		});
+		$o.attr("sort",!flag+"");
+		$($o).blur();
+		//cursor: pointer;
+	},
+	loadSelect: function(o,id,tableName,key,text,whereName,value){
+		var option = {};
+		
+		option.tableName = tableName;
+		option.key = key;
+		option.text = text;
+		option.whereName = whereName;
+		option.whereValue = o.value;
+		$.post(base+"/ajax/loadSelect.action",option,function(s){
+			$("#"+id).html(s);
+			if(value&&value!=""){
+				$("#"+id).val(value);
+			}
+		})
+	},
+	loadSelectAction: function(o,id,url,value){
+		var val;
+		if(typeof(o)=="string"){
+			val= o;
+		}else{
+			val = o.value;
+		}
+		if(val!=''){
+			$.post(url,{value:val},function(s){
+				$("#"+id).html(s);
+				if(value&&value!=""){
+					$("#"+id).val(value);
+				}
+			})
+		}
+	},
+	loadSelects: function(o,id,tableName,key,text,whereName,whereValues,orders,value){
+		var option = {};
+		
+		option.tableName = tableName;
+		option.key = key;
+		option.text = text;
+		option.whereName = whereName;
+		option.whereValue = o.value;
+		if(whereValues){
+			$.each( whereValues, function(i, n){
+					option[i]=n;
+				});
+		}
+	//	option.whereValues = whereValues;
+		$.post(base+"/ajax/loadSelects.action",option,function(s){
+			$("#"+id).html(s);
+			if(value&&value!=""){
+				$("#"+id).val(value);
+			}
+		})
+	},
+	appendSelect: function(o,tableName,key,text,whereName,order){
+		$o =$(o);
+		var cls= $o.attr("pclass");
+		var mcls= $o.attr("mclass");
+		var tid= $o.attr("tid");
+		var option = {};
+		option.tableName = tableName;
+		option.key = key;
+		option.text = text;
+		option.whereName = whereName;
+		option.order = order;
+		option.whereValue = $o.val();
+		if($o.attr("mvalue")){
+			option.whereValue = $o.attr("mvalue");
+		}
+		if(option.whereValue==""){
+			var $target = $o.parents("."+cls);
+			$target.find("~ ."+cls).remove();
+			$("#"+tid).val("");
+		}else{
+			var data = "";
+			var i = 0;
+			$.each(option,function(key,value){
+				if(i>0){
+					data+="&";
+				}
+				data+=key+"="+value;
+				i++;
+			});
+			$.ajax({
+				  url: base+"/selectLoad/loadSelect.action",
+				  cache: false,
+				  data:data,
+				  async: false,
+				  success: function(s){
+					if(s==''){
+						$("#"+tid).val($("."+cls+ ":last").find("select."+mcls).val());
+						return;
+					}
+					//$(o).find("~ ."+cls).remove();
+					var $target = $o.parents("."+cls);
+					$target.find("~ ."+cls).remove();
+					$clone = $target.clone();
+					//alert($clone.html());
+					$clone.find(".nocopy").remove();
+					$target.after($clone);
+					$clone.find("."+mcls).empty().append(s);
+					
+				  }
+				});
+		}
+	},
+	appendSelects: function(o,tableName,key,text,whereName,whereValues,orders){
+		$o =$(o);
+		var cls= $o.attr("pclass");
+		var mcls= $o.attr("mclass");
+		var tid= $o.attr("tid");
+		var option = {};
+		option.tableName = tableName;
+		option.key = key;
+		option.text = text;
+		option.whereName = whereName;
+		option.whereValue = o.value;
+		if(whereValues){
+			$.each( whereValues, function(i, n){
+					option["whereValues."+i]=n;
+				});
+		}
+		if(orders){
+			$.each(orders, function(i, n){
+					option["orders."+i]=n;
+				});
+		}
+		if($o.attr("mvalue")){
+			option.whereValue = $o.attr("mvalue");
+		}
+		if(option.whereValue==""){
+			var $target = $o.parents("."+cls);
+			$target.find("~ ."+cls).remove();
+			$("#"+tid).val("");
+		}else{
+			var data = "";
+			var i = 0;
+			$.each(option,function(key,value){
+				if(i>0){
+					data+="&";
+				}
+				data+=key+"="+value;
+				i++;
+			});
+			$.ajax({
+				  url: base+"/ajax/loadSelects.action",
+				  cache: false,
+				  data:data,
+				  async: false,
+				  success: function(s){
+					if(s==''){
+						$("#"+tid).val($("."+cls+ ":last").find("select."+mcls).val());
+						return;
+					}
+					//$(o).find("~ ."+cls).remove();
+					var $target = $o.parents("."+cls);
+					$target.find("~ ."+cls).remove();
+					$clone = $target.clone();
+					//alert($clone.html());
+					$clone.find(".nocopy").remove();
+					$target.after($clone);
+					$clone.find("."+mcls).empty().append(s);
+					
+				  }
+				});
+		}
+	},
+	initSelect :function($o){
+		
+  		var siblings = "."+$o.attr("pclass")+":last ."+$o.attr("mclass");
+  		var value = $("#"+$o.attr("tid")).val();
+  		for(var i =0;i<(value.length/3);i++){
+  			var val = value.substring(0,(i+1)*3);
+  			//if(i==0){
+  			//	$(siblings).val(val).attr("mvalue",val).change();
+  			//}else{
+  				$(siblings).attr("mvalue",val).change().val(val).removeAttr("mvalue");
+  			//}
+  		}
+  		$("#"+$o.attr("tid")).val(value);
+  	},
+     submitForm : function(url,formId){
+     	if(!_commonUI.hasObject(formId)){
+     		formId =  defaultFormId;
+     	}
+     	document.forms[formId].setAttribute('action',url);
+     	document.forms[formId].submit();
+     },
+     openJlSelect : function(option){
+     		var data = "";
+     		if(option){
+				var i = 0;
+				$.each(option,function(key,value){
+					if(i>0){
+						data+="&";
+					}
+					key="params."+key;
+					data+=key+"="+value;
+					i++;
+				});
+			}
+     	jw.dialog({rel:base+'/public/customize/serviceClass.action?'+data,over:false}); 
+     	
+     },
+     alert : function(content,title){
+     	if(!_commonUI.hasObject(title)){
+     			title = "提示信息";
+     		}
+     	$.messager.alert(title,content); 
+     },
+     confirm : function(content,fn,title){
+     		if(!_commonUI.hasObject(title)){
+     			title = "提示信息";
+     		}
+	     	$.messager.confirm(title,content,function(r){   
+				   if (r){   
+				  	fn();   
+				   } 
+	     	});  
+     }
+}

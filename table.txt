@@ -1,0 +1,39 @@
+device_id 			设备编号
+device_name			设备名称
+device_image		设备图片
+type				设备类型
+specifications		规格
+model				型号
+warranty_date		保修日期
+purchase_date		采购日期
+registry_date		登记日期
+location			存放位置
+supplier			供应商
+status				状态
+comment				备注
+--------------------------------------------------------------
+belong				归属科室
+belong_contact		科室联系人
+comment				备注
+-------------------------------------------------------------
+device_id			设备编号
+user_id				借出者编号
+user				借出者
+lend_time			借出时间
+pre_return			预归还时间
+return_time			归还时间
+reason				借出原因
+-------------------------------------------------------------
+device_id			设备编号
+repair_time			维修时间
+repair_man			维修人
+repair_money		维修金额
+repair_num			维修人电话
+comment				备注
+-------------------------------------------------------------
+device_id			设备编号
+scap				报废
+scap_reason			报废原因
+available_year		使用年限
+comment				备注
+--------------------------------------------------------------

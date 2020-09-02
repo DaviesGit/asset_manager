@@ -1,0 +1,42 @@
+device_id 				设备编号
+device_name 				设备名称
+device_type 				设备类型
+specifications 				规格
+device_model 				设备型号
+location 				存放位置
+status 				设备状态
+
+device_pic 				设备图片
+
+
+warranty_date 				保修日期
+purchase_date 				采购日期
+registry_date 				登记日期
+supplier 				供应商
+comment 				备注
+
+
+
+belong					归属科室
+belong_contact					科室联系人
+user_id					联系人编号
+user_name					联系人名称
+user_tel					联系人电话
+user_email					联系人邮箱
+
+
+
+
+
+
+
+device_id						设备编号
+user_id						用户编号
+user_name						用户名称
+user_tel						用户电话
+user_email						用户邮箱
+lend_time						借出时间
+pre_return						预归还时间
+reason						借出原因
+
+

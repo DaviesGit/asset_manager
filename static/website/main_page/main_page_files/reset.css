@@ -1,0 +1,92 @@
+@charset "utf-8";
+/* CSS Document */
+html, body, div, span, iframe,input, map, font, img, a img, samp, strong, hr, h1, h2, h3, h4, h5, h6, b, p, blockquote, a, address, code, dl, dt, dd, ol, ul, li, form, label, table, tr, td, th {
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+/* * {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+} */
+ol, ul {
+	list-style: none;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-size: 100%;
+	font-weight: normal;
+}
+a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+a {
+blr:expression(this.onFocus=this.blur());
+}
+a:focus {
+	outline: none;
+}
+a.hidefocus {
+	outline: none
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+img{
+	
+}
+input[type=text], input[type=button], input[type=submit]  {
+	-webkit-appearance: none; /*去除iPhone input默认样式}*/
+}
+input{font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;}
+.clearfix:after {
+	clear:both;
+	content:'.';
+	display:block;
+	width: 0;
+	height: 0;
+	visibility:hidden;
+}
+.clearfix{
+	zoom:1;
+}
+.container{
+	width: 1135px;
+	margin: 0 auto;
+	position: relative;
+}
+.dis{
+	display: none
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder { 
+    color:rgba(255,255,255,0.5);
+}
+input:-moz-placeholder, textarea:-moz-placeholder { 
+    color:rgba(255,255,255,0.5);
+}
+input::-moz-placeholder, textarea::-moz-placeholder { 
+    color:rgba(255,255,255,0.5);
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder { 
+    color:rgba(255,255,255,0.5);
+}
+
+
+
+
+
+
+
+
