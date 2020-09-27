@@ -83,7 +83,7 @@
 
 
 
-该资产管理系统拥有独创的二维码设备定位技术，可以通过二维码方便的定位对应的设备。该资产管理系统可以支持对资产进行采购、验收、建账、借用、归还、报废、报失等操作。同时支持批量导入和导出操作。网站的静态界面展示：https://daviesgit.github.io/asset_manager/static/website/login/login.html（注意，静态页面并不包含完整功能，如需要使用完整功能，请clone并运行django后端。登录帐号和密码均为admin。）
+该资产管理系统拥有独创的二维码设备定位技术，可以通过二维码方便的定位对应的设备。该资产管理系统可以支持对资产进行采购、验收、建账、借用、归还、报废、报失等操作。同时支持批量导入和导出操作。网站的静态界面展示：[https://daviesgit.github.io/asset_manager/static/website/login/login.html](https://daviesgit.github.io/asset_manager/static/website/login/login.html)（注意，静态页面并不包含完整功能，如需要使用完整功能，请clone并运行django后端。登录帐号和密码均为admin。）
 
 功能:
 * 用户权限管理。
